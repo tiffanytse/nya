@@ -20,7 +20,9 @@ get_header(); ?>
 						<?php the_post_thumbnail(); ?>
 					</div><!-- .entry-page-image -->
 				<?php endif; ?>
-
+        
+        <?php echo do_shortcode("[metaslider id=77]"); ?>
+        
 				<?php get_template_part( 'content', 'page' ); ?>
 
 			<?php endwhile; // end of the loop. ?>

@@ -10,12 +10,16 @@
  */
 ?>
 	</div><!-- #main .wrapper -->
-	
+
 	<?php if ( is_active_sidebar( 'footer' ) ) : ?>
 		<div id="footer-feature" class="footer col four-col" role="complementary">
 			<?php dynamic_sidebar( 'footer' ); ?>
 		</div><!-- #footer-feature -->
 	<?php endif; ?>
+	
+	<?php 
+      echo do_shortcode("[metaslider id=78]"); 
+  ?>
 	
 	<footer id="colophon" role="contentinfo">
     <!-- Footer Navigation -->
