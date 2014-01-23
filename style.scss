@@ -13,6 +13,8 @@ Text Domain: nya.ca
 
 @import url("../twentytwelve/style.css");
 
+
+
 @mixin ease{
   -webkit-transition: all 500ms ease-in-out;
   -moz-transition: all 500ms ease-in-out;
@@ -27,6 +29,14 @@ Text Domain: nya.ca
   -ms-transition: color 350ms ease-in-out;
   -o-transition: color 350ms ease-in-out;
   transition: color 350ms ease-in-out;
+}
+
+@mixin ease-height{
+  -webkit-transition: height 350ms ease-in-out;
+  -moz-transition: height 350ms ease-in-out;
+  -ms-transition: height 350ms ease-in-out;
+  -o-transition: height 350ms ease-in-out;
+  transition: height 350ms ease-in-out;
 }
 
 @mixin border-box{
@@ -51,6 +61,37 @@ Text Domain: nya.ca
   text-indent: 0;
   white-space: normal;
   overflow: visible;
+}
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem-fallback($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value*16}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  } 
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  } 
+  
+  #{$property}: $pxValues; 
+  #{$property}: $remValues; 
 }
 
 // Clearfix
@@ -86,6 +127,7 @@ $primary: $sbc-blue;
 $sbc-dark-blue: darken($primary, 15%); 
 $text-color: #444;
 $light-grey: #ededed;
+$black: #000;
 
 // Font Stacks
 $oswald: "Oswald", Helvetica, Arial, sans-serif;
@@ -142,10 +184,106 @@ body .site{
   float: left;
 }
 
-#site-navigation{
-float: right;
-z-index: 100;
-position: relative;
+#masthead.site-header{
+  background-color: $black;
+  padding: 0;
+  min-height: 4.5em;
 }
 
+/*
+* Main Navigation Menu
+*/
+
+#site-navigation{
+  margin-top: 0;
+  h3.menu-toggle{
+    @include hide-text;
+    @include zero;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: $black url('images/toggle.png') no-repeat center center;
+    background-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 1em;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $text-color;
+    &.toggled-on{
+      background: $black url('images/close.png') no-repeat center center;
+      background-size: 30px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  #menu-main-menu{
+    padding: 0 0 .3em;
+    width: 100%;
+    li{
+      padding: 1em 0; 
+      margin: 0;
+      a{
+        color: #fff;
+        @include rem-fallback(font-size, 1);
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+    
+    @media only screen and (min-width: 37.5em){ //600px
+      border: 0; 
+      display: none;
+      text-align: center;
+      width: auto;
+      float: right;
+      margin-right: 1em;
+      li{
+        margin: .5em 1em;
+        padding: 0;
+      }
+    }
+    @media only screen and (min-width: 45em){ //720px
+     // background-color: red;
+
+    }
+  }
+  #menu-main-menu.toggled-on{
+    li{
+      border-top: 1px solid #222;
+    }
+  }
+  
+}// site navigation
+
+
+.site-title{
+  float: left;  
+  width: 205px;
+  @include hide-text;
+  display:inline-block;
+  float: left;
+  @include zero;
+  margin-left: 10px;
+  margin-top: 20px;
+  background: $black url('images/nya-logo.png') no-repeat top left;
+  background-size: 160px;
+  @media only screen and (min-width: 20em){ //320px
+    background-size: 205px;
+    margin-top: 15px;
+  }
+  @media only screen and (min-width: 45em){
+    margin-left: 1em;
+    background-size: 250px;
+    width: 250px;
+  }
+}
+
+//flexslider
+.home-slider{
+  .caption-wrap{
+    position: static !important;
+  }
+}
 

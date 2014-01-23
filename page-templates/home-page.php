@@ -23,7 +23,7 @@ get_header(); ?>
         
         <?php echo do_shortcode("[metaslider id=77]"); ?>
         
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php //get_template_part( 'content', 'page' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
