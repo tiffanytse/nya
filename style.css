@@ -85,14 +85,14 @@ body .site {
       padding: 0;
       margin: 0 auto; } }
 
-.home #main.wrapper {
+#main.wrapper {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   max-width: 1400px; }
-  .home #main.wrapper .site-content {
+  #main.wrapper .site-content {
     margin: 0; }
 
 #masthead hgroup {

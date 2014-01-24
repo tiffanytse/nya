@@ -185,7 +185,7 @@ body .site{
   }
 }
 
-.home #main.wrapper{
+#main.wrapper{
   @include border-box;
   @include zero;
   max-width: 1400px;
