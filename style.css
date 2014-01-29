@@ -305,6 +305,11 @@ footer[role="contentinfo"] {
 /*
 *Footer Navigation
 */
+#menu-footer-menu {
+  margin-top: 2em; }
+  #menu-footer-menu li {
+    margin: 1em 0; }
+
 /*
 * Footer Widgets
 */
