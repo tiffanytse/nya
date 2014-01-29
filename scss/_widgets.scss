@@ -1,0 +1,77 @@
+/*
+* Footer Widgets
+*/
+
+
+#footer-feature{
+  clear: both;
+  @extend .cf;
+}
+.col aside{
+  float: left; 
+  display: inline-block;
+}
+.four-col aside{
+  width: 100%;
+  @include border-box; 
+  text-align: center;
+  padding: 3em 2em;
+  color: #fff; 
+  text-shadow: 0 1px 1px #333;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  @media only screen and (min-width: 37.5em){
+    width: 50%; 
+  }
+  @media only screen and (min-width: 65em){
+    width: 25%;
+    padding: 3.5em 2em;
+    
+  }
+  
+  
+  h3{
+    @include zero;
+    line-height: 1;
+    margin-bottom: 1em;  
+  }
+  p{
+    font-weight: 600;
+  }
+  a{
+    color: #fff;
+    text-decoration:none;
+    @include rem-fallback (font-size, 2.25);
+    font-weight: 900;
+  }
+}
+
+#linkabletitlehtmlandphpwidget-2{
+  background-color: #ffcc00;
+}
+#linkabletitlehtmlandphpwidget-3{
+  background-color: #f24d76;
+}
+#linkabletitlehtmlandphpwidget-4{
+  background-color: #b755b7;
+}
+#linkabletitlehtmlandphpwidget-5{
+  background-color: #3fa7ec;
+}
+
+
+
+/*
+* Flex Sliders
+*/
+
+.home-slider{
+  .caption-wrap{
+    position: static !important;
+  }
+}
+.featured-sponsors{
+  background-color: #1D1D1D;
+  padding: 2em 0;
+}
+
+

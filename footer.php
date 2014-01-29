@@ -22,7 +22,7 @@
   ?>
 	
 	<footer id="colophon" role="contentinfo">
-    <div id="" class="vcard">
+    <div class="vcard">
       <div class="org">Northern Youth Abroad</div>
       <div class="adr">
         <div class="street-address">311 Richmond Road, Unit 308</div>

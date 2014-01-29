@@ -11,26 +11,45 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: nya.ca
 */
-.cf:before,
-.cf:after {
+.cf:before, #footer-feature:before,
+.cf:after,
+#footer-feature:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.cf:after {
+.cf:after, #footer-feature:after {
   clear: both; }
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.cf {
+.cf, #footer-feature {
   *zoom: 1; }
 
-/*
+/* 
 * Variables
 */
+.cf:before, #footer-feature:before,
+.cf:after,
+#footer-feature:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after, #footer-feature:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf, #footer-feature {
+  *zoom: 1; }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -50,7 +69,7 @@ body{
   @media only screen and (min-width: 60.0em) { //960px
   background-position: center -275px;
   background-size: contain;
-  }
+  } 
 }
 */
 body .site {
@@ -101,11 +120,33 @@ body .site {
   float: left; }
 
 #masthead.site-header {
-  background-color: black;
+  background-color: #1d1d1d;
   padding: 0;
   min-height: 4.5em;
   position: relative;
   z-index: 100; }
+
+footer[role="contentinfo"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 1400px;
+  margin: 0;
+  padding: 2em 1em; }
+  @media only screen and (min-width: 37.5em) {
+    footer[role="contentinfo"] {
+      margin: 0;
+      padding: 0;
+      padding: 2em 1em;
+      margin: 0 auto; } }
+  @media only screen and (min-width: 65em) {
+    footer[role="contentinfo"] {
+      padding: 2em 3em; } }
+  @media only screen and (min-width: 87.5em) {
+    footer[role="contentinfo"] {
+      margin: 0;
+      padding: 0;
+      margin: 0 auto; } }
 
 /*
 * Main Navigation Menu
@@ -120,7 +161,7 @@ body .site {
     padding: 0;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    background: black url("images/toggle.png") no-repeat center center;
+    background: #1d1d1d url("images/toggle.png") no-repeat center center;
     background-size: 30px;
     position: absolute;
     top: 10px;
@@ -135,7 +176,7 @@ body .site {
       #site-navigation h3.menu-toggle {
         display: none !important; } }
     #site-navigation h3.menu-toggle.toggled-on {
-      background: black url("images/close.png") no-repeat center center;
+      background: #1d1d1d url("images/close.png") no-repeat center center;
       background-size: 30px;
       -webkit-box-shadow: none;
       box-shadow: none; }
@@ -187,7 +228,11 @@ body .site {
   padding: 0;
   margin-left: 10px;
   margin-top: 20px;
-  background: black url("images/nya-logo.png") no-repeat top left;
+  background-image: url("./images/nya-logo.png");
+  background-image: none, url("./images/nya-logo.svg");
+  background-color: #1d1d1d;
+  background-repeat: no-repeat;
+  background-position: top-left;
   background-size: 160px; }
   @media only screen and (min-width: 20em) {
     .site-title {
@@ -218,25 +263,115 @@ body .site {
       margin-right: .2em; }
       .menu-social-menu-container #menu-social-menu li:last-child {
         margin-right: 1em; }
-      .menu-social-menu-container #menu-social-menu li a {
-        color: #fff;
-        font-weight: bold;
-        background-color: gold;
+      .menu-social-menu-container #menu-social-menu li a[title="facebook"] {
+        background-color: #00B0ED;
+        background-image: url("./images/twitter.png");
+        background-image: none, url("./images/twitter.svg"); }
+      .menu-social-menu-container #menu-social-menu li a[title="twitter"] {
+        background: #517cd5;
+        background-image: url("./images/facebook.png");
+        background-image: none, url("./images/facebook.svg"); }
+      .menu-social-menu-container #menu-social-menu li a[title="facebook"],
+      .menu-social-menu-container #menu-social-menu li a[title="twitter"] {
         width: 40px;
-        height: 4em;
-        position: relative;
-        top: -1.5em;
-        display: inline-block;
         text-indent: 100%;
         white-space: nowrap;
         overflow: hidden;
+        height: 4em;
+        background-repeat: no-repeat;
+        background-position: center 1.7em;
+        background-size: 30px; }
+      .menu-social-menu-container #menu-social-menu li a {
+        color: #fff;
+        font-weight: bold;
+        position: relative;
+        display: inline-block;
+        -webkit-border-radius: 0 0 5px 5px;
+        border-radius: 0 0 5px 5px;
         -webkit-transition: all 500ms ease-in-out;
         -moz-transition: all 500ms ease-in-out;
         -ms-transition: all 500ms ease-in-out;
         -o-transition: all 500ms ease-in-out;
-        transition: all 500ms ease-in-out; }
+        transition: all 500ms ease-in-out;
+        top: -1.5em; }
         .menu-social-menu-container #menu-social-menu li a:hover {
-          top: 0; }
+          top: -1em; }
+      .menu-social-menu-container #menu-social-menu li a[title="newsletter"] {
+        background-color: #f24d76;
+        padding: 2.5em .75em .85em;
+        text-decoration: none;
+        vertical-align: bottom; }
 
+/*
+*Footer Navigation
+*/
+/*
+* Footer Widgets
+*/
+#footer-feature {
+  clear: both; }
+
+.col aside {
+  float: left;
+  display: inline-block; }
+
+.four-col aside {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 3em 2em;
+  color: #fff;
+  text-shadow: 0 1px 1px #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+  @media only screen and (min-width: 37.5em) {
+    .four-col aside {
+      width: 50%; } }
+  @media only screen and (min-width: 65em) {
+    .four-col aside {
+      width: 25%;
+      padding: 3.5em 2em; } }
+  .four-col aside h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    margin-bottom: 1em; }
+  .four-col aside p {
+    font-weight: 600; }
+  .four-col aside a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 36px;
+    font-size: 2.25rem;
+    font-weight: 900; }
+
+#linkabletitlehtmlandphpwidget-2 {
+  background-color: #ffcc00; }
+
+#linkabletitlehtmlandphpwidget-3 {
+  background-color: #f24d76; }
+
+#linkabletitlehtmlandphpwidget-4 {
+  background-color: #b755b7; }
+
+#linkabletitlehtmlandphpwidget-5 {
+  background-color: #3fa7ec; }
+
+/*
+* Flex Sliders
+*/
 .home-slider .caption-wrap {
   position: static !important; }
+
+.featured-sponsors {
+  background-color: #1D1D1D;
+  padding: 2em 0; }
+
+footer[role="contentinfo"] {
+  color: #fff;
+  background-color: #1d1d1d;
+  border-top: 1px solid #333;
+  line-height: 1.5; }
+  footer[role="contentinfo"] .vcard .org {
+    font-weight: bold; }

@@ -1,0 +1,11 @@
+footer[role="contentinfo"]{
+  color: #fff;
+  background-color: $black;
+  border-top: 1px solid #333;
+  line-height: 1.5;
+  .vcard{
+    .org{
+      font-weight: bold;
+    }
+  }
+}
