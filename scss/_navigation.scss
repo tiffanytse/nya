@@ -60,6 +60,7 @@
     @media only screen and (min-width: 47.5em){ //760px
      display: inline-block !important;
      width: auto;
+     margin-right: 10px;
      float: right;
      li{
        float: left;
@@ -73,6 +74,9 @@
     }
     li{
       border-top: 1px solid #444;
+      @media only screen and (min-width: 47.5em) { //600px
+        border: 0;
+      }
     }
   }
   
@@ -96,10 +100,7 @@
     background-size: 205px;
     margin-top: 15px;
   }
-  @media only screen and (min-width: 37.5em) { //600px
-    margin-left: 0;
-  }
-  @media only screen and (min-width: 45em){ //720px
+  @media only screen and (min-width: 47.5em){ //760px
     background-size: 250px;
     width: 250px;
   }
@@ -119,6 +120,12 @@
     position: absolute;
     right:0;
     margin-right: .2em;
+    @media only screen and (min-width: 47.5em){ //760px
+      margin-right: 1em;
+    }
+    @media only screen and (min-width: 87.5em){ //1400px
+      margin-right: 0;
+    }
     li{
       float: right;
       margin-right: .5em;

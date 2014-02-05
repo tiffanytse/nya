@@ -10,17 +10,22 @@
  */
 ?>
 	</div><!-- #main .wrapper -->
+		<div class="wrapper no-padding">
+    	<?php if ( is_active_sidebar( 'footer' ) ) : ?>
+    		<div id="footer-feature" class="footer col four-col" role="complementary">
+    			<?php dynamic_sidebar( 'footer' ); ?>
+    		</div><!-- #footer-feature -->
+    	<?php endif; ?>
+    </div> <!-- wrapper -->
+    
+	
+	<div class="black-wrapper">
+    <div class="wrapper">
+      <?php echo do_shortcode("[metaslider id=78]"); ?>
+    </div>
+  </div>
 
-	<?php if ( is_active_sidebar( 'footer' ) ) : ?>
-		<div id="footer-feature" class="footer col four-col" role="complementary">
-			<?php dynamic_sidebar( 'footer' ); ?>
-		</div><!-- #footer-feature -->
-	<?php endif; ?>
-	
-	<?php 
-      echo do_shortcode("[metaslider id=78]"); 
-  ?>
-	
+	<div class="black-wrapper">
 	<footer id="colophon" role="contentinfo">
     <div class="vcard">
       <div class="org">Northern Youth Abroad</div>
@@ -44,6 +49,7 @@
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->
+  </div>
 </div><!-- #page -->
 
 

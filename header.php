@@ -48,7 +48,9 @@
       </div>
   </header><!-- #masthead -->
   <!-- Social Navigation -->
-      <?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_class' => 'social-menu', 'fallback_cb' => false ) ); ?>
+      <div class="wrapper no-padding">
+        <?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_class' => 'social-menu', 'fallback_cb' => false ) ); ?>
+      </div>
   <!-- Social navigation close -->
 
   <div id="main" class="wrapper">

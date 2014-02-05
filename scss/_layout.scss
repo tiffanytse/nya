@@ -1,5 +1,3 @@
-@import "mixins";
-
 html, body{
   margin: 0;
   padding: 0;
@@ -38,14 +36,12 @@ body .site{
   @include zero;
   max-width: 1400px;
   margin: 0 auto;
-  position:relative;
+  position: relative;
   @media only screen and (min-width: 37.5em) { //600px
-    @include zero;
-    padding: 0 1em;
     margin: 0 auto;
   }
   @media only screen and (min-width: 65em){
-    padding: 0 3em;
+    padding: 0 1em;
     
   }
   @media only screen and (min-width: 87.5em) { //1400px
@@ -54,10 +50,15 @@ body .site{
   }
 } 
 
+.home #page{
+  @extend .green-wrapper;
+}
+
 .home #main.wrapper{
   @include border-box;
   @include zero;
   max-width: 1400px;
+  margin: 0 auto;
   .site-content{
     margin: 0;
   }

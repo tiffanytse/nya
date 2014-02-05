@@ -13,13 +13,12 @@ get_header(); ?>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php if ( has_post_thumbnail() ) : ?>
-					<div class="entry-page-image">
-						<?php the_post_thumbnail(); ?>
-					</div><!-- .entry-page-image -->
-				<?php endif; ?>
+    			<?php while ( have_posts() ) : the_post(); ?>
+    				<?php if ( has_post_thumbnail() ) : ?>
+  					<div class="entry-page-image">
+  						<?php the_post_thumbnail(); ?>
+  					</div><!-- .entry-page-image -->
+    			<?php endif; ?>
         
         <?php echo do_shortcode("[metaslider id=77]"); ?>
         
@@ -29,6 +28,5 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
 <?php //get_sidebar( 'front' ); ?>
 <?php get_footer(); ?>

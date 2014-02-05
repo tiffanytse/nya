@@ -1,7 +1,20 @@
+.black-wrapper{
+  border-top: 1px solid #333;
+  background-color: $black;
+  padding-top: 1em;
+}
+
+.green-wrapper{
+  background-color: #82c83c;
+}
+
+.no-padding{
+  padding: 0;
+}
+
 footer[role="contentinfo"]{
   color: #fff;
-  background-color: $black;
-  border-top: 1px solid #333;
+  border: 0;
   line-height: 1.5;
   @extend .cf;
   .vcard{
