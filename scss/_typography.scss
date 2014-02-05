@@ -1,0 +1,3 @@
+.milli{
+  @include rem-fallback(font-size, .6875);
+}

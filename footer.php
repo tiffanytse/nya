@@ -40,7 +40,7 @@
     <!-- Footer navigation close -->
     
 		<div class="site-info">
-      <p class="copyright">Copyright &copy; <?php echo date( 'Y' ) ?> Northern Youth Abroad</p>
+      <p class="milli">Copyright &copy; <?php echo date( 'Y' ) ?> Northern Youth Abroad</p>
 		</div><!-- .site-info -->
 
 	</footer><!-- #colophon -->
