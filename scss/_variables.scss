@@ -15,3 +15,11 @@ $green: #82c83c;
 $oswald: "Oswald", Helvetica, Arial, sans-serif;
 $lato:   "Lato", Helvetica, Arial, sans-serif;
 
+// Screen sizes
+// write out @media #{$variable-name} {
+
+$mobile: "only screen and (min-width: 20em)";
+$mobile-landscape: "only screen and (min-width: 37.5em)";
+$tablet: "only screen and (min-width: 48.125em)";
+$tablet-landscape: "only screen and (min-width: 60em)";
+$desktop: "only screen and (min-width: 87.5em)";

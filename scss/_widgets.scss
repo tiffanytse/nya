@@ -102,6 +102,9 @@
       -webkit-border-radius: 4px;
       border-radius: 4px;
       @include rem-fallback(font-size, .875); //14px
+      @media only screen and (min-width: 100em) { //1400px
+        padding: .2em 1em;
+      }
     }
     @media only screen and (min-width: 37.5em){
       h2{

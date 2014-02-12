@@ -188,7 +188,7 @@ h6, .zeta {
     @media only screen and (min-width: 37.5em) {
       #site-navigation h3.menu-toggle {
         display: inline-block; } }
-    @media only screen and (min-width: 47.5em) {
+    @media only screen and (min-width: 48.125em) {
       #site-navigation h3.menu-toggle {
         display: none !important; } }
     #site-navigation h3.menu-toggle.toggled-on {
@@ -218,7 +218,7 @@ h6, .zeta {
         #site-navigation #menu-main-menu li {
           padding: 0;
           display: block; } }
-    @media only screen and (min-width: 47.5em) {
+    @media only screen and (min-width: 48.125em) {
       #site-navigation #menu-main-menu {
         display: inline-block !important;
         width: auto;
@@ -232,7 +232,7 @@ h6, .zeta {
       display: inline-block !important; } }
   #site-navigation #menu-main-menu.toggled-on li {
     border-top: 1px solid #444; }
-    @media only screen and (min-width: 47.5em) {
+    @media only screen and (min-width: 48.125em) {
       #site-navigation #menu-main-menu.toggled-on li {
         border: 0; } }
 
@@ -258,7 +258,7 @@ h6, .zeta {
     .site-title {
       background-size: 205px;
       margin-top: 15px; } }
-  @media only screen and (min-width: 47.5em) {
+  @media only screen and (min-width: 48.125em) {
     .site-title {
       background-size: 250px;
       width: 250px; } }
@@ -276,7 +276,7 @@ h6, .zeta {
     position: absolute;
     right: 0;
     margin-right: .2em; }
-    @media only screen and (min-width: 47.5em) {
+    @media only screen and (min-width: 48.125em) {
       .menu-social-menu-container #menu-social-menu {
         margin-right: 1em; } }
     @media only screen and (min-width: 87.5em) {
@@ -337,7 +337,7 @@ h6, .zeta {
     .menu-footer-menu-container #menu-footer-menu li a {
       color: #fff;
       text-decoration: none; }
-  @media only screen and (min-width: 45em) {
+  @media only screen and (min-width: 48.125em) {
     .menu-footer-menu-container {
       margin-top: 0; }
       .menu-footer-menu-container #menu-footer-menu li {
@@ -442,6 +442,9 @@ h6, .zeta {
       border-radius: 4px;
       font-size: 14px;
       font-size: 0.875rem; }
+      @media only screen and (min-width: 100em) {
+        .home-slider.metaslider .caption-wrap a {
+          padding: .2em 1em; } }
     @media only screen and (min-width: 37.5em) {
       .home-slider.metaslider .caption-wrap h2 {
         font-size: 48px;
@@ -497,6 +500,7 @@ h6, .zeta {
   padding: 0; }
 
 .sponsor-slider h2 {
+  padding: 1em;
   color: #fff; }
   @media only screen and (min-width: 65em) {
     .sponsor-slider h2 {
