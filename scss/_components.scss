@@ -12,11 +12,28 @@
   padding: 0;
 }
 
+.sponsor-slider{
+  h2{
+    //padding: 1em;
+    color: #fff;
+    @media only screen and (min-width: 65em){
+      padding: 1em 1.5em;
+
+    }
+    @media only screen and (min-width: 100em) { //1400px
+      @include zero;
+      margin: 0 auto;
+    }
+  }
+
+}
+
 footer[role="contentinfo"]{
   color: #fff;
   border: 0;
   line-height: 1.5;
   @extend .cf;
+  
   .vcard{
     float: left;
     .org{

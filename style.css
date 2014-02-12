@@ -38,6 +38,9 @@ html, body {
   padding: 0;
   -webkit-font-smoothing: antialiased; }
 
+@media only screen and (min-width: 110em) {
+  html {
+    font-size: 100%; } }
 /*
 body{
   font-family: $lato;
@@ -71,7 +74,8 @@ body .site {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  max-width: 1400px;
+  max-width: 1600px;
+  max-width: 100rem;
   margin: 0 auto;
   position: relative; }
   @media only screen and (min-width: 37.5em) {
@@ -92,7 +96,8 @@ body .site {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  max-width: 1400px;
+  max-width: 1600px;
+  max-width: 100rem;
   margin: 0 auto; }
   .home #main.wrapper .site-content {
     margin: 0; }
@@ -111,7 +116,8 @@ footer[role="contentinfo"] {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  max-width: 1400px;
+  max-width: 1600px;
+  max-width: 100rem;
   margin: 0;
   padding: 2em 1em; }
   @media only screen and (min-width: 37.5em) {
@@ -123,7 +129,7 @@ footer[role="contentinfo"] {
   @media only screen and (min-width: 65em) {
     footer[role="contentinfo"] {
       padding: 2em 3em; } }
-  @media only screen and (min-width: 87.5em) {
+  @media only screen and (min-width: 100em) {
     footer[role="contentinfo"] {
       margin: 0;
       padding: 0;
@@ -401,13 +407,16 @@ h6, .zeta {
     .home-slider.metaslider {
       padding: 0; } }
   .home-slider.metaslider .caption-wrap {
-    top: 30%;
+    top: 10%;
     background: transparent !important;
     opacity: 1;
     padding: 0 3em;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
+    @media only screen and (min-width: 37.5em) {
+      .home-slider.metaslider .caption-wrap {
+        top: 30%; } }
     .home-slider.metaslider .caption-wrap h2 {
       text-transform: uppercase;
       font-size: 24px;
@@ -448,8 +457,8 @@ h6, .zeta {
       .home-slider.metaslider .caption-wrap a {
         margin-top: 32px;
         margin-top: 2rem;
-        font-size: 16px;
-        font-size: 1rem; } }
+        font-size: 14px;
+        font-size: 0.875rem; } }
     @media only screen and (min-width: 47.5em) {
       .home-slider.metaslider .caption-wrap {
         padding: 0 5em; }
@@ -458,11 +467,23 @@ h6, .zeta {
           margin-bottom: 2.5rem;
           font-size: 64px;
           font-size: 4rem; } }
+    @media only screen and (min-width: 87.5em) {
+      .home-slider.metaslider .caption-wrap h2 {
+        margin-bottom: 40px;
+        margin-bottom: 2.5rem;
+        font-size: 72px;
+        font-size: 4.5rem; }
+      .home-slider.metaslider .caption-wrap a {
+        font-size: 18px;
+        font-size: 1.125rem; }
+      .home-slider.metaslider .caption-wrap p {
+        font-size: 22px;
+        font-size: 1.375rem; } }
 
 .featured-sponsors {
   min-height: 150px;
   background-color: #1D1D1D;
-  padding: 2em 0 0; }
+  padding: 0 0 2em; }
 
 .black-wrapper {
   border-top: 1px solid #333;
@@ -474,6 +495,17 @@ h6, .zeta {
 
 .no-padding {
   padding: 0; }
+
+.sponsor-slider h2 {
+  color: #fff; }
+  @media only screen and (min-width: 65em) {
+    .sponsor-slider h2 {
+      padding: 1em 1.5em; } }
+  @media only screen and (min-width: 100em) {
+    .sponsor-slider h2 {
+      margin: 0;
+      padding: 0;
+      margin: 0 auto; } }
 
 footer[role="contentinfo"] {
   color: #fff;

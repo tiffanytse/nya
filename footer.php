@@ -19,8 +19,9 @@
     </div> <!-- wrapper -->
     
 	
-	<div class="black-wrapper">
+	<div class="black-wrapper sponsor-slider">
     <div class="wrapper">
+      <h2 class="epsilon">Our Dedicated Partners</h2>
       <?php echo do_shortcode("[metaslider id=78]"); ?>
     </div>
   </div>

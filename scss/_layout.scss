@@ -3,6 +3,12 @@ html, body{
   padding: 0;
   -webkit-font-smoothing: antialiased;
 }
+
+@media only screen and (min-width: 110em){
+  html{
+    font-size: 100%;
+  }
+}
 /*
 body{
   font-family: $lato;
@@ -34,7 +40,7 @@ body .site{
 .wrapper{
   @include border-box;
   @include zero;
-  max-width: 1400px;
+  @include rem-fallback(max-width, 100);
   margin: 0 auto;
   position: relative;
   @media only screen and (min-width: 37.5em) { //600px
@@ -57,7 +63,7 @@ body .site{
 .home #main.wrapper{
   @include border-box;
   @include zero;
-  max-width: 1400px;
+  @include rem-fallback(max-width, 100);
   margin: 0 auto;
   .site-content{
     margin: 0;
@@ -78,7 +84,7 @@ body .site{
 
 footer[role="contentinfo"]{
   @include border-box;
-  max-width: 1400px;
+  @include rem-fallback(max-width, 100);
   margin: 0;
   padding: 2em 1em; 
   @media only screen and (min-width: 37.5em) { //600px
@@ -90,7 +96,7 @@ footer[role="contentinfo"]{
     padding: 2em 3em;
     
   }
-  @media only screen and (min-width: 87.5em) { //1400px
+  @media only screen and (min-width: 100em) { //1400px
     @include zero;
     margin: 0 auto;
   }
