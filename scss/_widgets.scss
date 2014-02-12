@@ -64,12 +64,15 @@
 .home-slider.metaslider{
   background-color: #82c83c;
   padding: 2em 0;
-  @media only screen and (min-width: 37.5em){
+  @media #{$mobile-landscape}{
     padding: 0;
   }
   .caption-wrap{
     top: 10%;
-    @media only screen and (min-width: 37.5em){
+    @media #{$mobile-landscape}{
+      top: 20%;
+    }
+    @media #{$tablet}{
       top: 30%
     }
     background: transparent !important;
@@ -102,11 +105,14 @@
       -webkit-border-radius: 4px;
       border-radius: 4px;
       @include rem-fallback(font-size, .875); //14px
-      @media only screen and (min-width: 100em) { //1400px
+
+      @media #{$desktop-large}{ 
         padding: .2em 1em;
       }
+
     }
-    @media only screen and (min-width: 37.5em){
+
+    @media #{$mobile-landscape}{
       h2{
         @include rem-fallback(font-size, 3); //48px
         @include rem-fallback(margin-bottom, 2rem);
@@ -123,14 +129,16 @@
         @include rem-fallback(font-size, 0.875); //14px        
       }
     }//mediaqueries
-    @media only screen  and(min-width: 47.5em){
+
+    @media #{$tablet}{
       padding: 0 5em;
       h2{
         @include rem-fallback(margin-bottom, 2.5rem);
         @include rem-fallback(font-size, 4); //48px
       }
     }
-    @media only screen and (min-width: 87.5em){
+
+    @media #{$desktop}{
       h2{
         @include rem-fallback(margin-bottom, 2.5rem);
         @include rem-fallback(font-size, 4.5); //48px
