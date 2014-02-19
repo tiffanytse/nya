@@ -19,3 +19,33 @@ if ( function_exists('register_sidebar') ) {
 		'after_title' => '</h3>',
 	) );
 }
+
+// Add custom js in footer
+
+function load_scripts_footer() {
+	wp_enqueue_script('waypoints', get_stylesheet_directory_uri() . '/js/waypoints.min.js', array( 'jquery' ));
+	wp_enqueue_script('waypoints-sticky', get_stylesheet_directory_uri() . '/js/waypoints-sticky.min.js', array( 'waypoints' ));
+  wp_enqueue_script('custom-waypoint', get_stylesheet_directory_uri() . '/js/custom-waypoints.js', array( 'waypoints-sticky' ));
+  	
+}
+
+add_action( 'wp_footer', 'load_scripts_footer' );
+
+
+
+//Add custom login stylesheet
+function custom_login_css() {
+  echo '<link rel="stylesheet" type="text/css" href="'.get_stylesheet_directory_uri().'/login.css" />';
+}
+  add_action('login_head', 'custom_login_css');
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

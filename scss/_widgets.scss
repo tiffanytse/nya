@@ -69,30 +69,30 @@
   }
   .caption-wrap{
     top: 10%;
+
     @media #{$mobile-landscape}{
       top: 20%;
     }
+
     @media #{$tablet}{
       top: 30%
     }
+
     background: transparent !important;
-    //position: static !important; 
     opacity: 1;
     padding: 0 3em;
     @include border-box;
     h2{
       text-transform: uppercase;
       @include rem-fallback(font-size, 1.5); //18px
-      text-shadow: 0 1px 1px #333;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      @include text-shadow;
       margin-bottom: .5em;
     }
     p{
       display: none;
       line-height: 1.2;
       font-weight: 600;
-      text-shadow: 0 1px 1px #333;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      @include text-shadow;
     }//p
     a{
       text-transform: uppercase;
@@ -110,7 +110,7 @@
         padding: .2em 1em;
       }
 
-    }
+    }//a
 
     @media #{$mobile-landscape}{
       h2{
@@ -151,8 +151,8 @@
       }
     }//mediaqueries
     
-  }
-}
+  }//caption-wrap
+}//slider
 
 .featured-sponsors{
   min-height: 150px;

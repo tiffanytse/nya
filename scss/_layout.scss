@@ -82,6 +82,68 @@ body .site{
   z-index: 100;
 }
 
+
+/* 
+* Sidebar and Inside Pages
+*/
+
+#toc_container{
+  @include border-box;
+  width: 100%;
+  margin: 0 auto 2em;
+  float: none;
+  border: 0;
+  padding: 0;
+  @media #{$tablet}{
+    float: right;
+    width: 35%;
+    margin-left: 2em;
+    margin-top: -2em;
+    position: absolute;
+    right: 1em;
+    top: 76px;
+    .toc_list.stuck{
+      position: fixed;
+      right: 1em;
+      top: 2em;
+      width: 35%;
+      
+    }
+  }
+}
+
+.site-content{
+  margin-top: 0;
+  .entry-header{
+    margin: 0 0 2em;
+    @include rem-fallback(padding, 2, 1);
+    background-color: $green;
+    h1{
+      @extend .alpha; //2rem
+      color: #fff;
+      font-weight: bold;
+      @include text-shadow;
+      text-transform: uppercase;
+    }
+  }
+  .entry-content {
+    @media #{$tablet}{
+      float: right;
+      padding-right: 40%;
+    }
+    padding: 1em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 footer[role="contentinfo"]{
   @include border-box;
   @include rem-fallback(max-width, 100);
