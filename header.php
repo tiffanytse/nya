@@ -53,7 +53,7 @@
       </div>
   <!-- Social navigation close -->
 
-  <div id="main" class="wrapper">
+  <div id="main">
 
 
 

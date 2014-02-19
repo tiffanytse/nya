@@ -68,7 +68,7 @@ body .site {
       padding: 0;
       max-width: inherit; } }
 
-.wrapper {
+.wrapper, .site-content .entry-content {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -77,20 +77,21 @@ body .site {
   max-width: 1600px;
   max-width: 100rem;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  clear: both; }
   @media only screen and (min-width: 37.5em) {
-    .wrapper {
+    .wrapper, .site-content .entry-content {
       margin: 0 auto; } }
   @media only screen and (min-width: 65em) {
-    .wrapper {
+    .wrapper, .site-content .entry-content {
       padding: 0 1em; } }
   @media only screen and (min-width: 87.5em) {
-    .wrapper {
+    .wrapper, .site-content .entry-content {
       margin: 0;
       padding: 0;
       margin: 0 auto; } }
 
-.home #main.wrapper {
+.home #main.wrapper, .home .site-content #main.entry-content, .site-content .home #main.entry-content {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -99,7 +100,7 @@ body .site {
   max-width: 1600px;
   max-width: 100rem;
   margin: 0 auto; }
-  .home #main.wrapper .site-content {
+  .home #main.wrapper .site-content, .home .site-content #main.entry-content .site-content, .site-content .home #main.entry-content .site-content {
     margin: 0; }
 
 #masthead hgroup {
@@ -127,25 +128,27 @@ body .site {
   @media only screen and (min-width: 48.125em) {
     #toc_container {
       float: right;
-      width: 35%;
-      margin-left: 2em;
-      margin-top: -2em;
+      width: 400px;
       position: absolute;
       right: 1em;
-      top: 76px; }
+      top: 1em; }
       #toc_container .toc_list.stuck {
         position: fixed;
         right: 1em;
         top: 2em;
-        width: 35%; } }
+        width: 400px; } }
 
 .site-content {
   margin-top: 0; }
   .site-content .entry-header {
     margin: 0 0 2em;
-    padding: 32px 16px;
-    padding: 2rem 1rem;
+    padding: 48px 16px 32px;
+    padding: 3rem 1rem 2rem;
     background-color: #82c83c; }
+    @media only screen and (min-width: 37.5em) {
+      .site-content .entry-header {
+        padding: 32px 16px 32px;
+        padding: 2rem 1rem 2rem; } }
     .site-content .entry-header h1 {
       color: #fff;
       font-weight: bold;
@@ -157,7 +160,7 @@ body .site {
     @media only screen and (min-width: 48.125em) {
       .site-content .entry-content {
         float: right;
-        padding-right: 40%; } }
+        padding-right: 460px; } }
 
 footer[role="contentinfo"] {
   -moz-box-sizing: border-box;

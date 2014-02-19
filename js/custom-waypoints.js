@@ -1,5 +1,5 @@
 jQuery(function($) {
   $('.toc_list').waypoint('sticky', {
-    offset: 30 // Apply "stuck" when element 30px from top
+    offset: 32 // Apply "stuck" when element 30px from top
   });
 });

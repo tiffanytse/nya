@@ -43,18 +43,36 @@ body .site{
   @include rem-fallback(max-width, 100);
   margin: 0 auto;
   position: relative;
+  clear: both;
   @media #{$mobile-landscape}{ //600px
     margin: 0 auto;
   }
   @media only screen and (min-width: 65em){ // overrides parent theme styles
     padding: 0 1em;
-    
   }
   @media #{$desktop} { //1400px
     @include zero;
     margin: 0 auto;
   }
 } 
+
+%wrapper{
+  @include border-box;
+  @include zero;
+  @include rem-fallback(max-width, 100);
+  margin: 0 auto;
+  position: relative;
+  @media #{$mobile-landscape}{ //600px
+    margin: 0 auto;
+  }
+  @media only screen and (min-width: 65em){ // overrides parent theme styles
+    padding: 0 1em;
+  }
+  @media #{$desktop} { //1400px
+    @include zero;
+    margin: 0 auto;
+  }
+}
 
 .home #page{
   @extend .green-wrapper;
@@ -96,17 +114,16 @@ body .site{
   padding: 0;
   @media #{$tablet}{
     float: right;
-    width: 35%;
-    margin-left: 2em;
-    margin-top: -2em;
+    width: 400px;
+    //margin-top: -2em;
     position: absolute;
     right: 1em;
-    top: 76px;
+    top: 1em;
     .toc_list.stuck{
       position: fixed;
       right: 1em;
       top: 2em;
-      width: 35%;
+      width: 400px;
       
     }
   }
@@ -116,20 +133,25 @@ body .site{
   margin-top: 0;
   .entry-header{
     margin: 0 0 2em;
-    @include rem-fallback(padding, 2, 1);
+    @include rem-fallback(padding, 3, 1, 2);
     background-color: $green;
-    h1{
+    @media #{$mobile-landscape}{
+      @include rem-fallback(padding, 2, 1, 2);
+    }
+    h1{      
       @extend .alpha; //2rem
       color: #fff;
       font-weight: bold;
       @include text-shadow;
       text-transform: uppercase;
+      
     }
   }
   .entry-content {
+    @extend .wrapper;
     @media #{$tablet}{
       float: right;
-      padding-right: 40%;
+      padding-right: 460px;
     }
     padding: 1em;
   }
