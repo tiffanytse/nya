@@ -113,25 +113,38 @@ body .site{
   border: 0;
   padding: 0;
   @media #{$tablet}{
-    float: right;
-    width: 400px;
-    //margin-top: -2em;
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    .toc_list.stuck{
-      position: fixed;
-      right: 1em;
-      top: 2em;
-      width: 400px;
-      
+
+    .toc_list{
+      background: $green !important;
+      padding: 2em;
+      width: 350px;
+      @include border-box;
+      min-height: 300px;
+      &.stuck{
+        position: fixed;
+        top: 2em;
+        width: 350px;
+        z-index: 500;
+      }
+    }
+  }
+}
+
+.page-template-page-templatesnya-toc-php{
+  .site-content{
+    margin-top: 0;
+    .entry-content {
+      @extend .wrapper;
+      @media #{$tablet}{
+        padding-right: 460px;
+      }
+      padding: 1em;
     }
   }
 }
 
 .site-content{
-  margin-top: 0;
-  .entry-header{
+  .entry-header, .blog-header{
     margin: 0 0 2em;
     @include rem-fallback(padding, 3, 1, 2);
     background-color: $green;
@@ -144,26 +157,10 @@ body .site{
       font-weight: bold;
       @include text-shadow;
       text-transform: uppercase;
-      
+
     }
-  }
-  .entry-content {
-    @extend .wrapper;
-    @media #{$tablet}{
-      float: right;
-      padding-right: 460px;
-    }
-    padding: 1em;
   }
 }
-
-
-
-
-
-
-
-
 
 
 footer[role="contentinfo"]{

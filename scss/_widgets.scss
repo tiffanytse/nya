@@ -1,8 +1,6 @@
 /*
 * Footer Widgets
 */
-
-
 #footer-feature{
   clear: both;
   @extend .cf;
@@ -55,13 +53,13 @@
   background-color: #3fa7ec;
 }
 
-
-
 /*
 * Flex Sliders
 */
 
 .home-slider.metaslider{
+  @include rem-fallback(max-width, 100);
+  
   background-color: #82c83c;
   padding: 2em 0;
   @media #{$mobile-landscape}{
@@ -154,10 +152,22 @@
   }//caption-wrap
 }//slider
 
-.featured-sponsors{
-  min-height: 150px;
-  background-color: #1D1D1D;
-  padding: 0 0 2em;
+.sponsor-slider{
+  padding: 2em 0;
+  h2{
+    padding: 1em;
+    color: #fff;
+    @media #{$tablet-landscape}{
+      padding: 1em 1.5em 2em ;
+    }
+    @media #{$desktop-large}{
+      @include zero;
+      margin: 0 auto 2em ;
+    }
+  }
+  .metaslider{
+    background: $black;
+  }
 }
 
 

@@ -25,8 +25,9 @@ if ( function_exists('register_sidebar') ) {
 function load_scripts_footer() {
 	wp_enqueue_script('waypoints', get_stylesheet_directory_uri() . '/js/waypoints.min.js', array( 'jquery' ));
 	wp_enqueue_script('waypoints-sticky', get_stylesheet_directory_uri() . '/js/waypoints-sticky.min.js', array( 'waypoints' ));
-  wp_enqueue_script('custom-waypoint', get_stylesheet_directory_uri() . '/js/custom-waypoints.js', array( 'waypoints-sticky' ));
-  	
+	wp_enqueue_script('toc', get_stylesheet_directory_uri() . '/js/table-of-contents.jquery.js', array( 'jquery' ));
+  wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/js/scripts.js');
+  
 }
 
 add_action( 'wp_footer', 'load_scripts_footer' );

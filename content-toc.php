@@ -9,21 +9,22 @@
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="entry-header">
+    <header class="entry-header">
       <div class="wrapper">
-			<?php if ( ! is_page_template( 'page-templates/front-page.php' ) ) : ?>
-			<?php endif; ?>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-			</div>
-		</header>
+      <?php if ( ! is_page_template( 'page-templates/front-page.php' ) ) : ?>
+      <?php endif; ?>
+      <h1 class="entry-title"><?php the_title(); ?></h1>
+      </div>
+    </header>
     <div class="wrapper">
-
-  		<div class="entry-content">    
+      <aside class="toc-container">
+      </aside>
+  		<div class="entry-content toc-content">
   			<?php the_content(); ?>
   			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
   		</div><!-- .entry-content -->
   		<footer class="entry-meta">
   			<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
   		</footer><!-- .entry-meta -->
-    </div>
+		</div>
 	</article><!-- #post -->

@@ -2,6 +2,9 @@
   border-top: 1px solid #333;
   background-color: $black;
   padding-top: 1em;
+  @extend .cf;
+  position: relative;
+  z-index: 1000;
 }
 
 .green-wrapper{
@@ -10,22 +13,6 @@
 
 .no-padding{
   padding: 0;
-}
-
-.sponsor-slider{
-  h2{
-    padding: 1em;
-    color: #fff;
-    
-    @media #{$tablet-landscape}{
-      padding: 1em 1.5em;
-    }
-    @media #{$desktop-large}{
-      @include zero;
-      margin: 0 auto;
-    }
-  }
-
 }
 
 footer[role="contentinfo"]{
