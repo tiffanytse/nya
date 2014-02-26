@@ -156,7 +156,7 @@
   padding: 2em 0;
   h2{
     padding: 1em;
-    color: #fff;
+    color: #fff !important;
     @media #{$tablet-landscape}{
       padding: 1em 1.5em 2em ;
     }

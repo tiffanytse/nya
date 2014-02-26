@@ -2,6 +2,8 @@
   .entry-content{
     color: #333;
     h2{
+      @extend .alpha;
+      line-height: 1.2;
       color: darken($green, 10%);
     }
   }
@@ -10,11 +12,14 @@
   }
   
   // Page color changes
-  &.page-template-page-templatesnya-toc-php{
-    h2{
+  &.page-template-page-templatesnya-toc-php h2{
       color: darken($yellow, 10%);
     }
-  }
+  &.page-template-page-templatesnya-sidebar-php h2{
+      color: darken($blue, 10%); 
+    }
+  
+  
   
 }
 
@@ -46,5 +51,24 @@ $toc-bg: $green;
     
   }// .table-of-contents
 }// .toc-container
+
+// Page color changes
+.page-template-page-templatesnya-toc-php{
+  .toc-container nav.table-of-contents{
+    background: $yellow;
+    h5{@include alpha-attribute('background-color', rgba(black, 0.1), $yellow);}
+  }
+}
+
+.page-template-page-templatesnya-sidebar-php{
+  .toc-container nav.table-of-contents{
+    background: $blue;
+    h5{@include alpha-attribute('background-color', rgba(black, 0.1), $blue);}
+  }
+}
+
+
+
+
 
 

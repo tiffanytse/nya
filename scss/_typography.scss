@@ -56,6 +56,10 @@ h6,.zeta{
   @include rem-fallback(font-size, 4);
 }
 
+.giga{
+  @include rem-fallback(font-size, 3);
+}
+
 
 
 
