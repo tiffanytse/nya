@@ -3,23 +3,28 @@
 */
 
 //Colors
-$sbc-blue : #1a7ebe;
-$primary: $sbc-blue;
-$sbc-dark-blue: darken($primary, 15%); 
 $text-color: #444;
 $light-grey: #ededed;
 $black: #1d1d1d;
 $green: #82c83c;
+$yellow: #ffcc00;
+$pink: #f24d76;
+$purple: #b755b7;
+$blue: #3fa7ec;
 
 // Font Stacks
 $oswald: "Oswald", Helvetica, Arial, sans-serif;
 $lato:   "Lato", Helvetica, Arial, sans-serif;
 
 // Screen sizes
-// write out @media #{$variable-name} {
+// -> to include write the following
+// @media #{$variable-name} { ... }
 
-$mobile: "only screen and (min-width: 20em)";
-$mobile-landscape: "only screen and (min-width: 37.5em)";
-$tablet: "only screen and (min-width: 48.125em)";
-$tablet-landscape: "only screen and (min-width: 60em)";
-$desktop: "only screen and (min-width: 87.5em)";
+$mobile: "only screen and (min-width: 20em)"; //320px
+$mobile-landscape: "only screen and (min-width: 37.5em)"; //600px
+$tablet: "only screen and (min-width: 48.125em)"; //770px
+$tablet-landscape: "only screen and (min-width: 60em)"; //960px
+$desktop: "only screen and (min-width: 87.5em)"; //1400px
+$desktop-large: "only screen and (min-width: 100em)"; //1600px
+$desktop-xlarge: "only screen and (min-width: 110em)"; //1760px
+

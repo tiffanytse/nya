@@ -4,7 +4,7 @@ html, body{
   -webkit-font-smoothing: antialiased;
 }
 
-@media only screen and (min-width: 110em){
+@media #{$desktop-xlarge}{
   html{
     font-size: 100%;
   }
@@ -30,11 +30,15 @@ body .site{
   padding: 0;
   background-color: #fff;
   margin: 0 auto;
-  @media only screen and (min-width: 60.0em) { //960px
+  @media #{$mobile-landscape} { //960px
     margin: 0 auto; 
     padding:0;
     max-width: inherit; 
   }
+}
+
+.site-content{
+  margin-top: 0;
 }
 
 .wrapper{
@@ -43,18 +47,36 @@ body .site{
   @include rem-fallback(max-width, 100);
   margin: 0 auto;
   position: relative;
-  @media only screen and (min-width: 37.5em) { //600px
+  clear: both;
+  @media #{$mobile-landscape}{ //600px
     margin: 0 auto;
   }
-  @media only screen and (min-width: 65em){
+  @media only screen and (min-width: 65em){ // overrides parent theme styles
     padding: 0 1em;
-    
   }
-  @media only screen and (min-width: 87.5em) { //1400px
+  @media #{$desktop} { //1400px
     @include zero;
     margin: 0 auto;
   }
 } 
+
+%wrapper{
+  @include border-box;
+  @include zero;
+  @include rem-fallback(max-width, 100);
+  margin: 0 auto;
+  position: relative;
+  @media #{$mobile-landscape}{ //600px
+    margin: 0 auto;
+  }
+  @media only screen and (min-width: 65em){ // overrides parent theme styles
+    padding: 0 1em;
+  }
+  @media #{$desktop} { //1400px
+    @include zero;
+    margin: 0 auto;
+  }
+}
 
 .home #page{
   @extend .green-wrapper;
@@ -82,21 +104,105 @@ body .site{
   z-index: 100;
 }
 
+
+/* 
+* Sidebar and Inside Pages
+*/
+
+#toc_container{
+  @include border-box;
+  width: 100%;
+  margin: 0 auto 2em;
+  float: none;
+  border: 0;
+  padding: 0;
+  @media #{$tablet}{
+
+    .toc_list{
+      background: $green !important;
+      padding: 2em;
+      width: 350px;
+      @include border-box;
+      min-height: 300px;
+      &.stuck{
+        position: fixed;
+        top: 2em;
+        width: 350px;
+        z-index: 500;
+      }
+    }
+  }
+}
+
+.page-template-page-templatesnya-toc-php{
+  .site-content{
+    margin-top: 0;
+    .entry-content {
+      @extend .wrapper;
+      @media #{$tablet}{
+        padding-right: 460px;
+      }
+      padding: 1em;
+    }
+  }
+}
+
+.site-content{
+  .entry-header, .blog-header{
+    margin: 0 0 2em;
+    @include rem-fallback(padding, 3, 1, 2);
+    background-color: $green;
+    @media #{$mobile-landscape}{
+      @include rem-fallback(padding, 2, 1, 2);
+    }
+    h1{      
+      @extend .alpha; //2rem
+      color: #fff;
+      font-weight: bold;
+      @include text-shadow;
+      text-transform: uppercase;
+    }
+  }
+}
+// Page color changes
+.page-template-page-templatesnya-toc-about-php {
+  .site-content .entry-header{
+    background-color: $purple;
+  }
+}
+
+.page-template-page-templatesnya-toc-programs-php{
+  .site-content .entry-header{
+    background-color: $yellow;
+  }
+}
+.page-template-page-templatesnya-sidebar-php{
+  .site-content .entry-header{
+    background-color: $blue;
+  }
+}
+.page-template-page-templatesnya-partners-php{
+  .site-content .entry-header{
+    background-color: $pink;
+  }
+  
+}
+
 footer[role="contentinfo"]{
   @include border-box;
   @include rem-fallback(max-width, 100);
   margin: 0;
   padding: 2em 1em; 
-  @media only screen and (min-width: 37.5em) { //600px
+  @media #{$mobile-landscape} { //600px
     @include zero;
     padding: 2em 1em;
     margin: 0 auto;
   }
-  @media only screen and (min-width: 65em){
+  @media only screen and (min-width: 65em){ // overrides parent theme styles
     padding: 2em 3em;
     
   }
-  @media only screen and (min-width: 100em) { //1400px
+  @media #{$desktop-large} { //1400px
     @include zero;
     margin: 0 auto;
   }

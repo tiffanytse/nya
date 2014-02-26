@@ -1,0 +1,28 @@
+/* 
+* Variables
+*/
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
+body.login {
+  background-color: #1d1d1d; }
+
+.login h1 a {
+  background-image: url("./images/nya-logo.png");
+  background-image: none, url("./images/nya-logo.svg");
+  width: 240px;
+  background-size: 100%; }

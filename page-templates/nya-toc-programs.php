@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full-width Page Template, No Sidebar
+ * Template Name: NYA Programs Page Template
  *
  * Description: Twenty Twelve loves the no-sidebar look as much as
  * you do. Use this page template to remove the sidebar from any page.
@@ -20,10 +20,9 @@ get_header(); ?>
 		<div id="content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'content-toc', 'page' ); ?>
 				<?php comments_template( '', true ); ?>
 			<?php endwhile; // end of the loop. ?>
-
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

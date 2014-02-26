@@ -1,0 +1,210 @@
+.page{
+  .entry-content{
+    color: #333;
+    padding: 1em;
+    h2{
+      @extend .alpha;
+      line-height: 1.2;
+      color: darken($green, 10%);
+    }
+    a, 
+    a:link,
+    a:visited{
+      color: #000;
+      font-weight: bold;
+      @include ease-color;
+    }
+    a:hover,
+    a:focus, 
+    a:active{
+      color: darken(#777, 10%);
+    }
+  }
+  article{
+    border-bottom: 0;
+  }
+  
+  // Page color changes
+  &.page-template-page-templatesnya-toc-about-php h2{
+    color: darken($purple, 10%);
+  }
+  &.page-template-page-templatesnya-toc-programs-php h2{
+    color: darken($yellow, 10%);
+  }
+  &.page-template-page-templatesnya-sidebar-php h2{
+    color: darken($blue, 10%); 
+  }
+  &.page-template-page-templatesnya-partners-php h2{
+    color: darken($pink, 10%); 
+  }
+  
+  
+}
+
+$toc-bg: $green;
+
+.toc-container{
+  nav.table-of-contents{
+    background: $toc-bg;
+    h5{
+      @extend .gamma;
+      text-transform: uppercase;
+      @include text-shadow;
+      color: #fff;
+      @include alpha-attribute('background-color', rgba(black, 0.1), $toc-bg);
+      padding: .25em 1em .2em;
+      margin-bottom: .5em;
+    }
+    ul{
+      padding: 0 1em 1em;
+      li a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        &:hover{
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+    
+  }// .table-of-contents
+}// .toc-container
+
+// Page color changes
+
+.page-template-page-templatesnya-toc-about-php{
+  .toc-container nav.table-of-contents{
+    background: $purple;
+    h5{@include alpha-attribute('background-color', rgba(black, 0.1), $purple);}
+  }
+}
+
+.page-template-page-templatesnya-toc-programs-php{
+  .toc-container nav.table-of-contents{
+    background: $yellow;
+    h5{@include alpha-attribute('background-color', rgba(black, 0.1), $yellow);}
+  }
+}
+
+.page-template-page-templatesnya-sidebar-php{
+  .toc-container nav.table-of-contents{
+    background: $blue;
+    h5{@include alpha-attribute('background-color', rgba(black, 0.1), $blue);}
+  }
+}
+.page-template-page-templatesnya-partners-php{
+  .toc-container nav.table-of-contents{
+    background: $pink;
+    h5{@include alpha-attribute('background-color', rgba(black, 0.1), $pink);}
+  }
+  a[title="newsletter"]{
+    border: 1px solid #fff;
+  }
+}
+
+
+
+/*
+* Page Templates
+*/
+
+
+.page-template-page-templatesnya-partners-php{
+  .entry-content, .entry-meta{
+    padding: 1em 0;
+  }
+  .partner-items{
+    padding: 1em;
+    @include border-box;
+    
+    h2{
+      margin-bottom: .5em;
+      @extend .alpha;
+    }
+    img{
+      width: 75%;
+      max-width: 150px;
+      display: inline-block;
+      float: left;
+      margin: 0 2em 2em 0;
+      @media #{$mobile-landscape} { //600px
+        margin: 0 2em 4em 0;
+      }
+    }
+
+    .item{
+      clear: both;
+      padding-bottom:0 ;
+      margin-bottom: 4em;
+      border-bottom: 1px solid #f5f5f5;
+      @media #{$mobile-landscape} { //600px
+        min-height: 200px;
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+        max-width: 800px;        
+      }
+    }
+    @media #{$mobile-landscape} { //600px
+      h2, .entry-content{
+       clear: none;
+       display: inline;
+       p, a{ 
+         display: block;
+       }
+       p{
+         padding-left: 11.25em;
+         
+       }
+      }
+    }// mediaquery
+
+  }
+}
+
+.blog{
+  .type-post{
+    border-bottom: 1px solid #f5f5f5;
+    .entry-header{
+      background: transparent;
+      @include zero;
+      padding: 0 1em;
+      h1{
+        text-shadow: none;
+        @extend .giga;
+        text-transform: none;
+        margin-bottom: .3em;
+        a{
+          color: darken($green, 10%);
+          &:hover{
+            color: darken($green, 15%);
+          }
+        }
+      }
+      date{
+        color: #999;
+//        font-weight: bold;
+        font-style: italic;
+        margin-left: 2px;
+        margin-bottom: .5em;
+        display: block;
+      }
+    }
+    .entry-content{
+      padding: 1em;
+    }
+    .entry-meta{
+      padding: 1em;
+      margin-top: 0;
+      span.tag{
+        display: block;
+        padding: .2em 2em;
+        background: url('images/tag.png') no-repeat center left;
+        background-size: 15px;
+        border-top: 1px solid #f5f5f5;
+        border-bottom: 1px solid #f5f5f5;
+      }
+    }
+    
+  }//type-post
+}
+
