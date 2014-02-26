@@ -806,4 +806,5 @@ hr {
   padding: 1em; }
 .blog .type-post span.tag {
   display: inline-block;
-  padding-left: 2em; }
+  padding-left: 2em;
+  background: url("../images/tag.png") no-repeat top left; }
