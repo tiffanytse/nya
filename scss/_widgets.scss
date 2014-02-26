@@ -188,13 +188,12 @@
 .mapsmarker{
   margin-bottom: 2em;
   margin-right: 2em;
+  max-width: 100%;
 
-  @media only screen and (min-width: 52.5em){ //840px
+  @media #{$tablet} { //600px
     float: left;
     margin-bottom: 4em;
-    
-  }
-  @media only screen and (min-width: 60em){ //960px
+    width: 100px;
   }
 }
 
