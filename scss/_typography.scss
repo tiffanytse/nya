@@ -60,6 +60,14 @@ h6,.zeta{
   @include rem-fallback(font-size, 3);
 }
 
+.entry-content{
+  a, 
+  a:link,
+  a:visited{
+    color: darken($blue, 10%);
+  }
+}
+
 
 
 

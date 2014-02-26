@@ -165,7 +165,13 @@ body .site{
   }
 }
 // Page color changes
-.page-template-page-templatesnya-toc-php{
+.page-template-page-templatesnya-toc-about-php {
+  .site-content .entry-header{
+    background-color: $purple;
+  }
+}
+
+.page-template-page-templatesnya-toc-programs-php{
   .site-content .entry-header{
     background-color: $yellow;
   }
@@ -175,7 +181,12 @@ body .site{
     background-color: $blue;
   }
 }
-
+.page-template-page-templatesnya-partners-php{
+  .site-content .entry-header{
+    background-color: $pink;
+  }
+  
+}
 
 footer[role="contentinfo"]{
   @include border-box;
