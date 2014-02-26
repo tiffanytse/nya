@@ -69,6 +69,9 @@ body .site {
       padding: 0;
       max-width: inherit; } }
 
+.site-content {
+  margin-top: 0; }
+
 .wrapper, .page-template-page-templatesnya-toc-php .site-content .entry-content {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -165,6 +168,9 @@ body .site {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     text-transform: uppercase; }
 
+.page-template-page-templatesnya-toc-php .site-content .entry-header {
+  background-color: #ffcc00; }
+
 footer[role="contentinfo"] {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -196,7 +202,7 @@ h2, .beta {
   font-size: 24px;
   font-size: 1.5rem; }
 
-h3, .gamma {
+h3, .gamma, .toc-container nav.table-of-contents h5 {
   font-size: 18.72px;
   font-size: 1.17rem; }
 
@@ -227,9 +233,11 @@ h6, .zeta {
 .comment-content .beta {
   font-size: 24px;
   font-size: 1.5rem; }
-.entry-content h3, .entry-content .gamma,
+.entry-content h3, .entry-content .gamma, .entry-content .toc-container nav.table-of-contents h5, .toc-container nav.table-of-contents .entry-content h5,
 .comment-content h3,
-.comment-content .gamma {
+.comment-content .gamma,
+.comment-content .toc-container nav.table-of-contents h5,
+.toc-container nav.table-of-contents .comment-content h5 {
   font-size: 18.72px;
   font-size: 1.17rem; }
 .entry-content h4, .entry-content .delta,
@@ -597,6 +605,21 @@ h6, .zeta {
   .sponsor-slider .metaslider {
     background: #1d1d1d; }
 
+.leaflet-container a.leaflet-popup-close-button {
+  padding: 10px 10px 0 0 !important; }
+
+.leaflet-control-attribution.leaflet-control,
+.gmnoprint {
+  display: none; }
+
+.mapsmarker {
+  margin-bottom: 2em;
+  margin-right: 2em; }
+  @media only screen and (min-width: 52.5em) {
+    .mapsmarker {
+      float: left;
+      margin-bottom: 4em; } }
+
 .black-wrapper {
   border-top: 1px solid #333;
   background-color: #1d1d1d;
@@ -622,3 +645,32 @@ footer[role="contentinfo"] {
     clear: both;
     padding-top: 2em;
     color: #bbb; }
+
+.page .entry-content {
+  color: #333; }
+  .page .entry-content h2 {
+    color: #69a32e; }
+.page article {
+  border-bottom: 0; }
+.page.page-template-page-templatesnya-toc-php h2 {
+  color: #cca300; }
+
+.toc-container nav.table-of-contents {
+  background: #82c83c; }
+  .toc-container nav.table-of-contents h5 {
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    background-color: #75b436;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: .25em 1em .2em;
+    margin-bottom: .5em; }
+  .toc-container nav.table-of-contents ul {
+    padding: 0 1em 1em; }
+    .toc-container nav.table-of-contents ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 700; }
+      .toc-container nav.table-of-contents ul li a:hover {
+        border-bottom: 1px solid #eee; }

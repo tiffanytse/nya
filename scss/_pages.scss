@@ -1,0 +1,50 @@
+.page{
+  .entry-content{
+    color: #333;
+    h2{
+      color: darken($green, 10%);
+    }
+  }
+  article{
+    border-bottom: 0;
+  }
+  
+  // Page color changes
+  &.page-template-page-templatesnya-toc-php{
+    h2{
+      color: darken($yellow, 10%);
+    }
+  }
+  
+}
+
+$toc-bg: $green;
+
+.toc-container{
+  nav.table-of-contents{
+    background: $toc-bg;
+    h5{
+      @extend .gamma;
+      text-transform: uppercase;
+      @include text-shadow;
+      color: #fff;
+      @include alpha-attribute('background-color', rgba(black, 0.1), $toc-bg);
+      padding: .25em 1em .2em;
+      margin-bottom: .5em;
+    }
+    ul{
+      padding: 0 1em 1em;
+      li a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: 700;
+        &:hover{
+          border-bottom: 1px solid #eee;
+        }
+      }
+    }
+    
+  }// .table-of-contents
+}// .toc-container
+
+

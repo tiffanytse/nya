@@ -41,16 +41,16 @@
 }
 
 #linkabletitlehtmlandphpwidget-2{
-  background-color: #ffcc00;
+  background-color: $yellow;
 }
 #linkabletitlehtmlandphpwidget-3{
-  background-color: #f24d76;
+  background-color: $pink;
 }
 #linkabletitlehtmlandphpwidget-4{
-  background-color: #b755b7;
+  background-color: $purple;
 }
 #linkabletitlehtmlandphpwidget-5{
-  background-color: #3fa7ec;
+  background-color: $blue;
 }
 
 /*
@@ -167,6 +167,34 @@
   }
   .metaslider{
     background: $black;
+  }
+}
+
+
+
+
+
+// Leaflet maps
+
+.leaflet-container a.leaflet-popup-close-button{
+  padding: 10px 10px 0 0 !important;
+}
+
+.leaflet-control-attribution.leaflet-control, 
+.gmnoprint{
+  display: none;
+}
+
+.mapsmarker{
+  margin-bottom: 2em;
+  margin-right: 2em;
+
+  @media only screen and (min-width: 52.5em){ //840px
+    float: left;
+    margin-bottom: 4em;
+    
+  }
+  @media only screen and (min-width: 60em){ //960px
   }
 }
 
