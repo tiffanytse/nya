@@ -16,6 +16,8 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 		</div>
 	</header>
+	<div class="wrapper">
+  
     <aside class="toc-container">
       <!-- toc goes here -->
       <?php get_sidebar(); ?>
@@ -27,4 +29,5 @@
 		<footer class="entry-meta">
 			<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
+  </div>
 	</article><!-- #post -->

@@ -31,7 +31,7 @@
   &.page-template-page-templatesnya-toc-programs-php h2{
     color: darken($yellow, 10%);
   }
-  &.page-template-page-templatesnya-sidebar-php h2{
+  &.page-template-page-templatesnya-participants-php h2{
     color: darken($blue, 10%); 
   }
   &.page-template-page-templatesnya-partners-php h2{
@@ -44,6 +44,7 @@
 $toc-bg: $green;
 
 .toc-container{
+  //margin: 0 1em;
   nav.table-of-contents{
     background: $toc-bg;
     h5{
@@ -70,6 +71,72 @@ $toc-bg: $green;
   }// .table-of-contents
 }// .toc-container
 
+// Toc Page templates - stuck toc styles
+
+@media #{$tablet}{
+  .wrapper{
+    position: relative;
+  }
+  .toc-content{
+    width: 65%;
+    float: left;
+  }
+  .sticky-wrapper{
+    margin-right: 1em;
+    width: 25%;
+    float: right;
+  }
+  .toc-container{
+    width: 100%;
+  }
+  .toc-container.stuck{
+    position: fixed;
+    width: 25%;
+    top: 32px;
+    margin-right: 1em;
+  } 
+}
+
+@media #{$tablet-landscape}{
+  .sticky-wrapper{
+    margin-right: 2em;
+    width: 18.75em;  
+  }
+  .toc-container.stuck{
+    float: none;
+    width: 18.75em;  
+    
+    width: 21.25em; //340px  
+    
+    margin-right: 2em;
+  }
+}
+
+@media only screen and (min-width: 62.5em){
+  .sticky-wrapper{
+    width: 21.25em; //340px   
+  }
+  .toc-container.stuck{
+    width: 21.25em; //340px  
+  }
+}
+
+
+@media #{$desktop}{
+  .page .entry-content{
+    padding: 0;
+  }
+}
+// Fixes
+.site-content{
+  @media only screen and (min-width: 37.5em){
+    @include zero;
+    float: none;
+    width: 100%;
+  }
+}
+
+
 // Page color changes
 
 .page-template-page-templatesnya-toc-about-php{
@@ -86,7 +153,7 @@ $toc-bg: $green;
   }
 }
 
-.page-template-page-templatesnya-sidebar-php{
+.page-template-page-templatesnya-participants-php{
   .toc-container nav.table-of-contents{
     background: $blue;
     h5{@include alpha-attribute('background-color', rgba(black, 0.1), $blue);}
@@ -206,5 +273,19 @@ $toc-bg: $green;
     }
     
   }//type-post
+  
+  @media #{$tablet}{
+    .widget-area{
+      width: 25%;
+      float: right;
+    }
+    .post{
+      margin-top: 2em;
+      margin-bottom: 2em;
+      width: 65%;
+      float: left;
+    }
+  }
+  
 }
 

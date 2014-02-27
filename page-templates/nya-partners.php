@@ -35,9 +35,10 @@ get_header(); ?>
       	<footer class="entry-meta">
       		<?php edit_post_link( __( 'Edit', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?>
       	</footer><!-- .entry-meta -->
+ 	      <hr>
       </div>
 		<?php endwhile; // end of the loop. ?>
-  	<hr>
+ 
   		
   		
 			<div class="partner-items wrapper">

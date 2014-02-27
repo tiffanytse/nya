@@ -104,6 +104,20 @@ body .site{
   z-index: 100;
 }
 
+.widget-area{
+  margin-left: 1em;
+  margin-right: 1em;
+  @media only screen and (min-width: 37.5em){
+    float: none;
+    width: 100%;
+  }
+  
+  @media #{$tablet} { //1400px
+    margin-left: 0 ;
+    margin-right: 0;
+  }
+}
+
 
 /* 
 * Sidebar and Inside Pages
@@ -176,7 +190,7 @@ body .site{
     background-color: $yellow;
   }
 }
-.page-template-page-templatesnya-sidebar-php{
+.page-template-page-templatesnya-participants-php{
   .site-content .entry-header{
     background-color: $blue;
   }
