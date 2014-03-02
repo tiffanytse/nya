@@ -5,52 +5,125 @@
   clear: both;
   @extend .cf;
 }
-.col aside{
-  float: left; 
-  display: inline-block;
-}
-.four-col aside{
-  width: 100%;
-  @include border-box; 
-  text-align: center;
-  padding: 3em 2em;
-  color: #fff; 
-  text-shadow: 0 1px 1px #333;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-  @media only screen and (min-width: 37.5em){
-    width: 50%; 
-  }
-  @media only screen and (min-width: 65em){
-    width: 25%;
-    padding: 3.5em 2em;
+.four-col {
+  a{
+    padding: 3em 2em;
+    display: inline-block;
+    @include border-box; 
+    text-shadow: 0 1px 1px #333;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    height: 10.5em;
+    text-align: center;
+    float: left;
+
+    @media #{$mobile-landscape}{
+      width: 50%; 
+    }
+    @media #{$tablet-landscape}{
+      width: 25%;
+      height: 13em;      
+    }
+  }//a
+  
+  p{
+    font-weight: 600;
   }
   h3{
     @include zero;
     line-height: 1;
-    margin-bottom: 1em;  
-  }
-  p{
-    font-weight: 600;
-  }
-  a{
-    color: #fff;
+    margin-bottom: .5em;
     text-decoration:none;
     @include rem-fallback (font-size, 2.25);
     font-weight: 900;
+    text-transform:uppercase;
+    @media #{$tablet-landscape}{
+      margin-top: .5em;
+    }
+  }
+}
+/* Animate the boxes */
+@mixin animate{
+  background-size: 100% 202%;
+  transition: all 0.2s ease;
+  -webkit-animation: down-bump 0.4s ease; 
+  animation: down-bump 0.4s ease; 
+  &:hover{
+    background-position: 100% 100%;
+    -webkit-animation: up-bump 0.4s ease;
+    animation: up-bump 0.4s ease;
+    text-shadow: none; 
   }
 }
 
-#linkabletitlehtmlandphpwidget-2{
-  background-color: $yellow;
+#linkabletitlehtmlandphpwidget-2 a{
+  background: linear-gradient(
+    $yellow, $yellow 50%, darken($yellow, 5%) 50%, darken($yellow, 5%)
+  );
+  @include animate;
 }
-#linkabletitlehtmlandphpwidget-3{
-  background-color: $pink;
+#linkabletitlehtmlandphpwidget-3 a{
+  background: linear-gradient(
+    $pink, $pink 50%, darken($pink, 5%) 50%, darken($pink, 5%)
+  );
+  @include animate;
 }
-#linkabletitlehtmlandphpwidget-4{
-  background-color: $purple;
+#linkabletitlehtmlandphpwidget-4 a{
+  background: linear-gradient(
+    $purple, $purple 50%, darken($purple, 5%) 50%, darken($purple, 5%)
+  );
+  @include animate;
 }
-#linkabletitlehtmlandphpwidget-5{
-  background-color: $blue;
+#linkabletitlehtmlandphpwidget-5 a{
+  background: linear-gradient(
+    $blue, $blue 50%, darken($blue, 5%) 50%, darken($blue, 5%)
+  );
+  @include animate;
+}
+
+
+@-webkit-keyframes up-bump {
+  0% { padding-top: 3em; }
+  50% { padding-top: 3.5em; }
+  100% { padding-top: 3em; }
+}
+@-moz-keyframes up-bump {
+  0% { padding-top: 3em; }
+  50% { padding-top: 3.5em; }
+  100% { padding-top: 3em; }
+}
+@-o-keyframes up-bump {
+  0% { padding-top: 3em; }
+  50% { padding-top: 3.5em; }
+  100% { padding-top: 3em; }
+}
+@keyframes up-bump {
+  0% { padding-top: 3em; }
+  50% { padding-top: 3.5em; }
+  100% { padding-top: 3em; }
+}
+
+@-webkit-keyframes down-bump {
+  0% { padding-top: 3em; }
+  50% { padding-top: 3.5em; }
+  100% { padding-top: 3em; }
+}
+@-moz-keyframes down-bump {
+  0% { padding-top: 3em; }
+  50% { padding-top: 3.5em; }
+  100% { padding-top: 3em; }
+}
+@-o-keyframes down-bump {
+  0% { padding-top: 3em; }
+  50% { padding-top: 3.5em; }
+  100% { padding-top: 3em; }
+}
+@keyframes down-bump {
+  0% { padding-top: 3em; }
+  50% { padding-top: 3.5em; }
+  100% { padding-top: 3em; }
 }
 
 /*
@@ -80,6 +153,7 @@
     opacity: 1;
     padding: 0 3em;
     @include border-box;
+    @include ease;
     h2{
       text-transform: uppercase;
       @include rem-fallback(font-size, 1.5); //18px
@@ -112,33 +186,33 @@
 
     @media #{$mobile-landscape}{
       h2{
-        @include rem-fallback(font-size, 3); //48px
-        @include rem-fallback(margin-bottom, 2rem);
+        @include rem-fallback(font-size, 3); 
+        @include rem-fallback(margin-bottom, 2);
       }
       p{
         width: 500px;
         display: block;
         line-height: 1.5;
-        @include rem-fallback(font-size, 1.125); //22px
+        @include rem-fallback(font-size, 1.125); 
         
       }//p
       a{
-        @include rem-fallback(margin-top, 2rem);
-        @include rem-fallback(font-size, 0.875); //14px        
+        @include rem-fallback(margin-top, 2);
+        @include rem-fallback(font-size, 1);  
       }
     }//mediaqueries
 
     @media #{$tablet}{
       padding: 0 5em;
       h2{
-        @include rem-fallback(margin-bottom, 2.5rem);
+        @include rem-fallback(margin-bottom, 2.5);
         @include rem-fallback(font-size, 4); //48px
       }
     }
 
     @media #{$desktop}{
       h2{
-        @include rem-fallback(margin-bottom, 2.5rem);
+        @include rem-fallback(margin-bottom, 2.5);
         @include rem-fallback(font-size, 4.5); //48px
       }
       a{
