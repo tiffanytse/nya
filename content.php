@@ -8,7 +8,6 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
- $d = 'F jS, Y'
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
