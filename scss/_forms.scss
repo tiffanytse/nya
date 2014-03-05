@@ -22,9 +22,16 @@
   }
   
   .vfb-legend{
-    padding: 1em;
+    padding: 0 1em 1em; 
+    border-radius: 0;
   }
   
+  .vfb-error{
+    font-weight: normal;
+    background-color: #FEF7F7;
+    display: inline-block;
+    padding: .2em 1em;
+  }
   
   fieldset, 
   .vfb-section-div{

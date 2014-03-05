@@ -832,7 +832,13 @@ hr {
     -o-border-radius: 3px;
     border-radius: 3px; }
   .visual-form-builder .vfb-legend {
-    padding: 1em; }
+    padding: 0 1em 1em;
+    border-radius: 0; }
+  .visual-form-builder .vfb-error {
+    font-weight: normal;
+    background-color: #FEF7F7;
+    display: inline-block;
+    padding: .2em 1em; }
   .visual-form-builder fieldset,
   .visual-form-builder .vfb-section-div {
     background-color: #fff;
