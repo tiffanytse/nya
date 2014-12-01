@@ -1020,7 +1020,12 @@ hr {
     position: fixed;
     width: 25%;
     top: 32px;
-    margin-right: 1em; } }
+    margin-right: 1em; }
+
+  .toc-container.stuck.sticky-bottom {
+    position: absolute;
+    bottom: -4em;
+    top: inherit; } }
 @media only screen and (min-width: 60em) {
   .sticky-wrapper {
     margin-right: 2em;
@@ -1029,7 +1034,6 @@ hr {
   .toc-container.stuck {
     float: none;
     width: 18.75em;
-    width: 21.25em;
     margin-right: 2em; } }
 @media only screen and (min-width: 62.5em) {
   .sticky-wrapper {

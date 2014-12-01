@@ -95,6 +95,11 @@ $toc-bg: $green;
     top: 32px;
     margin-right: 1em;
   } 
+  .toc-container.stuck.sticky-bottom{ // sets positioning of TOC to stop before footer
+    position: absolute;
+    bottom: -4em;
+    top: inherit;
+  }
 }
 
 @media #{$tablet-landscape}{
@@ -105,11 +110,9 @@ $toc-bg: $green;
   .toc-container.stuck{
     float: none;
     width: 18.75em;  
-    
-    width: 21.25em; //340px  
-    
     margin-right: 2em;
   }
+
 }
 
 @media only screen and (min-width: 62.5em){
