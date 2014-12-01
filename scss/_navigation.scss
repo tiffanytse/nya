@@ -43,7 +43,28 @@
         text-decoration: none;
         font-weight: bold;
         text-transform: uppercase;
+        display: block;
+        
       }
+      &.menu-item-has-children{
+        padding: 1em 0 0;
+        .sub-menu{
+          margin-top: 1em;
+          padding: 0;
+          display: block;
+          position: relative;
+          li{
+            padding: 0;
+            background: #fff;
+            padding: .5em 0;
+            a{
+              display: block;
+              margin: 0;
+              color: $text-color;
+            } //a 
+          }//li
+        }//.submenu
+      }//menu-item-has-children
     }
     
     @media #{$mobile-landscape}{ //600px
@@ -52,8 +73,29 @@
       text-align: center;
       width: 100%;
       li{
-        padding: 0;
+        padding: 1em 0;
         display: block;
+        a{
+          line-height: 1.42857143;
+        }
+        &.menu-item-has-children{
+          padding: 1em 0 0;
+          .sub-menu{
+            margin-top: 1em;
+            padding: 0;
+            display: block;
+            position: relative;
+            li{
+              text-align: center;
+              a{
+                background: #fff;
+                border: 0;
+                padding:0; 
+                width: auto;
+              } //a 
+            }//li
+          }//.submenu
+        }//menu-item-has-children
       }
     }
     
@@ -64,9 +106,49 @@
      float: right;
      li{
        float: left;
-       margin: .5em 0 0 2em;
+       padding: 0;
+       margin: 0 0 0 1em;
+       a{
+         padding: 1.25em .5em;
+         margin-top: 0;
+         &:hover{
+           background: #242424;
+           -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+           -ms-border-radius: 5px;
+           border-radius: 5px;
+         }
+       }
+       &.menu-item-has-children:hover > ul{
+         display: block;
+       }
+       &.menu-item-has-children{
+         padding: 0;
+         .sub-menu{
+           margin: 0;
+           position: absolute;
+           display: none;
+           li{
+             margin: 0;
+             padding: 0;
+             text-align: left;
+             a{
+               padding: .5em 1em;
+               width: 200px;
+               border-bottom: 1px solid #ccc;
+               &:hover{
+                 background: #ddd;
+               }
+             }
+           }
+         }
+       }
      }
     }
+  }
+  
+  @media #{$tablet-landscape}{ //960
+    padding-top: 5px;
   }
   #menu-main-menu.toggled-on{
     @media only screen and (min-width: 37.5em){ //600px
