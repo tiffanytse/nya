@@ -421,7 +421,11 @@ h6, .zeta {
                   width: 200px;
                   border-bottom: 1px solid #ccc; }
                   #site-navigation #menu-main-menu li.menu-item-has-children .sub-menu li a:hover {
-                    background: #ddd; } }
+                    background: #eee;
+                    -webkit-border-radius: 0px;
+                    -moz-border-radius: 0px;
+                    -ms-border-radius: 0px;
+                    border-radius: 0px; } }
   @media only screen and (min-width: 60em) {
     #site-navigation {
       padding-top: 5px; } }

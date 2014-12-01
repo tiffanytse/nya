@@ -137,7 +137,11 @@
                width: 200px;
                border-bottom: 1px solid #ccc;
                &:hover{
-                 background: #ddd;
+                 background: #eee;
+                 -webkit-border-radius: 0px;
+                 -moz-border-radius: 0px;
+                 -ms-border-radius: 0px;
+                 border-radius: 0px;
                }
              }
            }
