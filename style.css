@@ -189,7 +189,8 @@ body .site {
 .page-template-page-templatesnya-participants-php .site-content .entry-header {
   background-color: #3fa7ec; }
 
-.page-template-page-templatesnya-partners-php .site-content .entry-header {
+.page-template-page-templatesnya-partners-php .site-content .entry-header,
+.page-template-page-templatesnya-get-involved-php .site-content .entry-header {
   background-color: #f24d76; }
 
 footer[role="contentinfo"] {
@@ -1075,7 +1076,7 @@ hr {
   color: #ff7f00; }
 .page.page-template-page-templatesnya-participants-php h2 {
   color: #1691e2; }
-.page.page-template-page-templatesnya-partners-php h2 {
+.page.page-template-page-templatesnya-partners-php h2, .page.page-template-page-templatesnya-get-involved-php h2 {
   color: #ef1d51; }
 
 .toc-container nav.table-of-contents {
@@ -1170,12 +1171,15 @@ hr {
     background-color: #3896d4;
     background-color: rgba(0, 0, 0, 0.1); }
 
-.page-template-page-templatesnya-partners-php .toc-container nav.table-of-contents {
+.page-template-page-templatesnya-partners-php .toc-container nav.table-of-contents,
+.page-template-page-templatesnya-get-involved-php .toc-container nav.table-of-contents {
   background: #f24d76; }
-  .page-template-page-templatesnya-partners-php .toc-container nav.table-of-contents h5 {
+  .page-template-page-templatesnya-partners-php .toc-container nav.table-of-contents h5,
+  .page-template-page-templatesnya-get-involved-php .toc-container nav.table-of-contents h5 {
     background-color: #d9456a;
     background-color: rgba(0, 0, 0, 0.1); }
-.page-template-page-templatesnya-partners-php a[title="newsletter"] {
+.page-template-page-templatesnya-partners-php a[title="newsletter"],
+.page-template-page-templatesnya-get-involved-php a[title="newsletter"] {
   border: 1px solid #fff;
   margin-top: -2px; }
 

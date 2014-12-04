@@ -34,7 +34,8 @@
   &.page-template-page-templatesnya-participants-php h2{
     color: darken($blue, 10%); 
   }
-  &.page-template-page-templatesnya-partners-php h2{
+  &.page-template-page-templatesnya-partners-php h2, 
+  &.page-template-page-templatesnya-get-involved-php h2{
     color: darken($pink, 10%); 
   }
   
@@ -166,7 +167,8 @@ $toc-bg: $green;
     h5{@include alpha-attribute('background-color', rgba(black, 0.1), $blue);}
   }
 }
-.page-template-page-templatesnya-partners-php{
+.page-template-page-templatesnya-partners-php,
+.page-template-page-templatesnya-get-involved-php{
   .toc-container nav.table-of-contents{
     background: $pink;
     h5{@include alpha-attribute('background-color', rgba(black, 0.1), $pink);}
