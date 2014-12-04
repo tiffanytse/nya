@@ -39,8 +39,17 @@ function custom_login_css() {
   echo '<link rel="stylesheet" type="text/css" href="'.get_stylesheet_directory_uri().'/login.css" />';
 }
   add_action('login_head', 'custom_login_css');
-  
-  
+
+//Add custom login url (back to nya)
+function my_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+function my_login_logo_url_title() {
+    return 'Northern Youth Abroad';
+}
+add_filter( 'login_headertitle', 'my_login_logo_url_title' );
   
   
   
