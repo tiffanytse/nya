@@ -154,6 +154,10 @@ $toc-bg: $green;
     background: $yellow;
     h5{@include alpha-attribute('background-color', rgba(black, 0.1), $yellow);}
   }
+  a[title="donate"]{
+    border: 1px solid #fff;
+    margin-top: -2px;
+  }
 }
 
 .page-template-page-templatesnya-participants-php{
@@ -169,6 +173,7 @@ $toc-bg: $green;
   }
   a[title="newsletter"]{
     border: 1px solid #fff;
+    margin-top: -2px;
   }
 }
 

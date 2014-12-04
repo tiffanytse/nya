@@ -112,7 +112,7 @@
          padding: 1.25em .5em;
          margin-top: 0;
          &:hover{
-           background: #242424;
+           background: #292929;
            -webkit-border-radius: 5px;
            -moz-border-radius: 5px;
            -ms-border-radius: 5px;
@@ -224,8 +224,13 @@
         background-color: #78d8e2;
         @include vector-bg-with-fallback(twitter);
       }
+      a[title="donate"]{
+        background-color: $yellow; 
+        @include vector-bg-with-fallback(donate);
+      }
       a[title="facebook"],
-      a[title="twitter"]{ 
+      a[title="twitter"], 
+      a[title="donate"]{ 
         width: 40px;
         text-indent: 100%;
         white-space: nowrap;
@@ -257,6 +262,16 @@
         padding: 2.25em 0.5em .75em;
         
       }//newsletter
+      @media #{$mobile}{ 
+        a[title="donate"]{
+          display: block;
+          text-decoration: none;
+          padding: 2.25em 0.5em .75em;
+          background-image: none;
+          @include show-text;
+          width: inherit;
+        }
+      }
     }//li
   }//social menu
 }//social menu container

@@ -184,7 +184,7 @@ body .site {
   background-color: #b755b7; }
 
 .page-template-page-templatesnya-toc-programs-php .site-content .entry-header {
-  background-color: #ffcc00; }
+  background-color: #ff9933; }
 
 .page-template-page-templatesnya-participants-php .site-content .entry-header {
   background-color: #3fa7ec; }
@@ -399,7 +399,7 @@ h6, .zeta {
             padding: 1.25em .5em;
             margin-top: 0; }
             #site-navigation #menu-main-menu li a:hover {
-              background: #242424;
+              background: #292929;
               -webkit-border-radius: 5px;
               -moz-border-radius: 5px;
               -ms-border-radius: 5px;
@@ -495,8 +495,13 @@ h6, .zeta {
         background-color: #78d8e2;
         background-image: url("./images/twitter.png");
         background-image: none, url("./images/twitter.svg"); }
+      .menu-social-menu-container #menu-social-menu li a[title="donate"] {
+        background-color: #ff9933;
+        background-image: url("./images/donate.png");
+        background-image: none, url("./images/donate.svg"); }
       .menu-social-menu-container #menu-social-menu li a[title="facebook"],
-      .menu-social-menu-container #menu-social-menu li a[title="twitter"] {
+      .menu-social-menu-container #menu-social-menu li a[title="twitter"],
+      .menu-social-menu-container #menu-social-menu li a[title="donate"] {
         width: 40px;
         text-indent: 100%;
         white-space: nowrap;
@@ -526,6 +531,16 @@ h6, .zeta {
         background-color: #f24d76;
         text-decoration: none;
         padding: 2.25em 0.5em .75em; }
+      @media only screen and (min-width: 20em) {
+        .menu-social-menu-container #menu-social-menu li a[title="donate"] {
+          display: block;
+          text-decoration: none;
+          padding: 2.25em 0.5em .75em;
+          background-image: none;
+          text-indent: 0;
+          white-space: normal;
+          overflow: visible;
+          width: inherit; } }
 
 /*
 *Footer Navigation
@@ -574,7 +589,13 @@ h6, .zeta {
       width: 25%;
       height: 13em; } }
 .four-col p {
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 16px;
+  font-size: 1rem; }
+  @media only screen and (min-width: 87.5em) {
+    .four-col p {
+      font-size: 18.72px;
+      font-size: 1.17rem; } }
 .four-col h3 {
   margin: 0;
   padding: 0;
@@ -591,7 +612,7 @@ h6, .zeta {
 
 /* Animate the boxes */
 #linkabletitlehtmlandphpwidget-2 a {
-  background: linear-gradient(#ffcc00, #ffcc00 50%, #e6b800 50%, #e6b800);
+  background: linear-gradient(#ff9933, #ff9933 50%, #ff8c1a 50%, #ff8c1a);
   background-size: 100% 202%;
   transition: all 0.2s ease;
   -webkit-animation: down-bump 0.4s ease;
@@ -722,7 +743,7 @@ h6, .zeta {
     .home-slider.metaslider {
       padding: 0; } }
   .home-slider.metaslider .caption-wrap {
-    top: 10%;
+    top: 20%;
     background: transparent !important;
     opacity: 1;
     padding: 0 3em;
@@ -734,9 +755,6 @@ h6, .zeta {
     -ms-transition: all 500ms ease-in-out;
     -o-transition: all 500ms ease-in-out;
     transition: all 500ms ease-in-out; }
-    @media only screen and (min-width: 37.5em) {
-      .home-slider.metaslider .caption-wrap {
-        top: 20%; } }
     @media only screen and (min-width: 48.125em) {
       .home-slider.metaslider .caption-wrap {
         top: 30%; } }
@@ -758,16 +776,19 @@ h6, .zeta {
       display: inline-block;
       color: #fff;
       background: #1d1d1d;
-      padding: 0 1em;
+      padding: .3em 1em;
       text-decoration: none;
       font-weight: bold;
       -webkit-border-radius: 4px;
       border-radius: 4px;
       font-size: 14px;
       font-size: 0.875rem; }
+      @media only screen and (min-width: 87.5em) {
+        .home-slider.metaslider .caption-wrap a {
+          padding: .4em 1em; } }
       @media only screen and (min-width: 100em) {
         .home-slider.metaslider .caption-wrap a {
-          padding: .2em 1em; } }
+          padding: .5em 1em; } }
     @media only screen and (min-width: 37.5em) {
       .home-slider.metaslider .caption-wrap h2 {
         font-size: 48px;
@@ -792,7 +813,17 @@ h6, .zeta {
           margin-bottom: 40px;
           margin-bottom: 2.5rem;
           font-size: 64px;
-          font-size: 4rem; } }
+          font-size: 4rem; }
+        .home-slider.metaslider .caption-wrap p {
+          font-size: 18.72px;
+          font-size: 1.17rem; } }
+    @media only screen and (min-width: 60em) {
+      .home-slider.metaslider .caption-wrap p {
+        font-size: 21.2px;
+        font-size: 1.325rem; }
+      .home-slider.metaslider .caption-wrap a {
+        font-size: 18.72px;
+        font-size: 1.17rem; } }
     @media only screen and (min-width: 87.5em) {
       .home-slider.metaslider .caption-wrap h2 {
         margin-bottom: 40px;
@@ -800,11 +831,11 @@ h6, .zeta {
         font-size: 72px;
         font-size: 4.5rem; }
       .home-slider.metaslider .caption-wrap a {
-        font-size: 18px;
-        font-size: 1.125rem; }
+        font-size: 21.2px;
+        font-size: 1.325rem; }
       .home-slider.metaslider .caption-wrap p {
-        font-size: 22px;
-        font-size: 1.375rem; } }
+        font-size: 24px;
+        font-size: 1.5rem; } }
 
 .sponsor-slider {
   padding: 2em 0; }
@@ -1041,7 +1072,7 @@ hr {
 .page.page-template-page-templatesnya-toc-about-php h2 {
   color: #984198; }
 .page.page-template-page-templatesnya-toc-programs-php h2 {
-  color: #cca300; }
+  color: #ff7f00; }
 .page.page-template-page-templatesnya-participants-php h2 {
   color: #1691e2; }
 .page.page-template-page-templatesnya-partners-php h2 {
@@ -1125,10 +1156,13 @@ hr {
     background-color: rgba(0, 0, 0, 0.1); }
 
 .page-template-page-templatesnya-toc-programs-php .toc-container nav.table-of-contents {
-  background: #ffcc00; }
+  background: #ff9933; }
   .page-template-page-templatesnya-toc-programs-php .toc-container nav.table-of-contents h5 {
-    background-color: #e5b700;
+    background-color: #e5892d;
     background-color: rgba(0, 0, 0, 0.1); }
+.page-template-page-templatesnya-toc-programs-php a[title="donate"] {
+  border: 1px solid #fff;
+  margin-top: -2px; }
 
 .page-template-page-templatesnya-participants-php .toc-container nav.table-of-contents {
   background: #3fa7ec; }
@@ -1142,7 +1176,8 @@ hr {
     background-color: #d9456a;
     background-color: rgba(0, 0, 0, 0.1); }
 .page-template-page-templatesnya-partners-php a[title="newsletter"] {
-  border: 1px solid #fff; }
+  border: 1px solid #fff;
+  margin-top: -2px; }
 
 /*
 * Page Templates

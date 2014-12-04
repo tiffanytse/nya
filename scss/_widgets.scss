@@ -30,6 +30,10 @@
   
   p{
     font-weight: 600;
+    @include rem-fallback(font-size, 1); 
+    @media #{$desktop}{
+      @include rem-fallback(font-size, 1.17); 
+    }
   }
   h3{
     @include zero;
@@ -139,11 +143,7 @@
     padding: 0;
   }
   .caption-wrap{
-    top: 10%;
-
-    @media #{$mobile-landscape}{
-      top: 20%;
-    }
+    top: 20%;
 
     @media #{$tablet}{
       top: 30%
@@ -171,15 +171,17 @@
       display: inline-block;
       color: #fff;
       background: $black;
-      padding: 0 1em;
+      padding: .3em 1em;
       text-decoration: none;
       font-weight: bold;
       -webkit-border-radius: 4px;
       border-radius: 4px;
       @include rem-fallback(font-size, .875); //14px
-
+      @media #{$desktop}{ 
+        padding: .4em 1em;
+      }
       @media #{$desktop-large}{ 
-        padding: .2em 1em;
+        padding: .5em 1em;
       }
 
     }//a
@@ -206,20 +208,32 @@
       padding: 0 5em;
       h2{
         @include rem-fallback(margin-bottom, 2.5);
-        @include rem-fallback(font-size, 4); //48px
+        @include rem-fallback(font-size, 4); 
       }
+      p{
+        @include rem-fallback(font-size, 1.17); 
+      }
+    }
+    
+    @media #{$tablet-landscape}{
+      p{
+        @include rem-fallback(font-size, 1.325); 
+      }
+      a{
+         @include rem-fallback(font-size, 1.17); 
+       }
     }
 
     @media #{$desktop}{
       h2{
         @include rem-fallback(margin-bottom, 2.5);
-        @include rem-fallback(font-size, 4.5); //48px
+        @include rem-fallback(font-size, 4.5); 
       }
       a{
-        @include rem-fallback(font-size, 1.125); //14px        
+        @include rem-fallback(font-size, 1.325);       
       }
       p{
-        @include rem-fallback(font-size, 1.375); //22px
+        @include rem-fallback(font-size, 1.5); 
       }
     }//mediaqueries
     
