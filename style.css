@@ -11,9 +11,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: nya.ca
 */
 @import url("../twentytwelve/style.css");
-.cf:before, #footer-feature:before, .black-wrapper:before, footer[role="contentinfo"]:before,
+.cf:before, #footer-feature:before, .widget-area .widget .latest-tweets li:before, .black-wrapper:before, footer[role="contentinfo"]:before,
 .cf:after,
 #footer-feature:after,
+.widget-area .widget .latest-tweets li:after,
 .black-wrapper:after,
 footer[role="contentinfo"]:after {
   content: " ";
@@ -21,14 +22,14 @@ footer[role="contentinfo"]:after {
   display: table;
   /* 2 */ }
 
-.cf:after, #footer-feature:after, .black-wrapper:after, footer[role="contentinfo"]:after {
+.cf:after, #footer-feature:after, .widget-area .widget .latest-tweets li:after, .black-wrapper:after, footer[role="contentinfo"]:after {
   clear: both; }
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.cf, #footer-feature, .black-wrapper, footer[role="contentinfo"] {
+.cf, #footer-feature, .widget-area .widget .latest-tweets li, .black-wrapper, footer[role="contentinfo"] {
   *zoom: 1; }
 
 /* 
@@ -305,7 +306,7 @@ h6, .zeta {
 */
 #site-navigation {
   margin-top: 0; }
-  #site-navigation h3.menu-toggle {
+  #site-navigation button.menu-toggle {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -322,12 +323,12 @@ h6, .zeta {
     height: 40px;
     border: 1px solid #444444; }
     @media only screen and (min-width: 37.5em) {
-      #site-navigation h3.menu-toggle {
+      #site-navigation button.menu-toggle {
         display: inline-block; } }
     @media only screen and (min-width: 48.125em) {
-      #site-navigation h3.menu-toggle {
+      #site-navigation button.menu-toggle {
         display: none !important; } }
-    #site-navigation h3.menu-toggle.toggled-on {
+    #site-navigation button.menu-toggle.toggled-on {
       background: #1d1d1d url("images/close.png") no-repeat center center;
       background-size: 30px;
       -webkit-box-shadow: none;
@@ -870,6 +871,18 @@ h6, .zeta {
       float: left;
       margin-bottom: 4em;
       width: 100px; } }
+
+.widget-area .widget .latest-tweets li {
+  border: 1px solid #ededed;
+  padding: 1em;
+  border-radius: 3px;
+  margin-bottom: 1em; }
+.widget-area .widget .tweet-text,
+.widget-area .widget .tweet-details {
+  margin-bottom: .5em;
+  margin-top: .5em; }
+.widget-area .widget .tweet-details {
+  float: right; }
 
 .black-wrapper {
   border-top: 1px solid #333;

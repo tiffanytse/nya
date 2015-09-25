@@ -283,3 +283,23 @@
 }
 
 
+// Latest Tweets
+.widget-area .widget{
+  .latest-tweets li{
+    border: 1px solid $light-grey;
+    padding: 1em;
+    border-radius:3px;
+    margin-bottom: 1em; 
+    @extend .cf;
+  }
+  .tweet-text, 
+  .tweet-details{
+    margin-bottom: .5em; 
+    margin-top: .5em; 
+  }
+  .tweet-details{
+    float: right;
+  }
+}
+
+
