@@ -777,20 +777,25 @@ h6, .zeta {
       text-transform: uppercase;
       display: inline-block;
       color: #fff;
-      background: #1d1d1d;
-      padding: .3em 1em;
+      background-color: #1d1d1d;
+      padding: .5em 2.5em .5em 1em;
       text-decoration: none;
       font-weight: bold;
       -webkit-border-radius: 4px;
       border-radius: 4px;
       font-size: 14px;
-      font-size: 0.875rem; }
+      font-size: 0.875rem;
+      background-image: url("./images/arrow-right.png");
+      background-image: none, url("./images/arrow-right.svg");
+      background-repeat: no-repeat;
+      background-position: right .75em top .65em;
+      background-size: 15px; }
       @media only screen and (min-width: 87.5em) {
         .home-slider.metaslider .caption-wrap a {
-          padding: .4em 1em; } }
+          padding: .4em 2.5em .4em 1em; } }
       @media only screen and (min-width: 100em) {
         .home-slider.metaslider .caption-wrap a {
-          padding: .5em 1em; } }
+          padding: .5em 2.5em .5em 1em; } }
     @media only screen and (min-width: 37.5em) {
       .home-slider.metaslider .caption-wrap h2 {
         font-size: 48px;
