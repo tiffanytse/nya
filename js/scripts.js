@@ -12,6 +12,10 @@ jQuery(function($) {
     }
   });
 
+  // Disable zoom scroll on maps
+  $(document).bind('em_maps_location_hook', function( e, map, infowindow, marker ){
+    map.scrollwheel = false;
+  });
 
 });
 

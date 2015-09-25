@@ -27,7 +27,6 @@ get_header(); ?>
       	</div>
       </header>
       <div class="wrapper">
-
       	<div class="entry-content">    
       		<?php the_content(); ?>
       		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
@@ -37,13 +36,14 @@ get_header(); ?>
       	</footer><!-- .entry-meta -->
  	      <hr>
       </div>
-		<?php endwhile; // end of the loop. ?>
- 
-  		
-  		
-			<div class="partner-items wrapper">
-					<?php $loop = new WP_Query( array( 'post_type' => 'partners', 'posts_per_page' => 10 ) ); ?>
 
+		<?php endwhile; // end of the loop. ?>
+    <div class="wrapper">
+      <aside class="static-sidebar">
+        <?php get_sidebar(); ?>
+      </aside>
+			<div class="list-items entry-content">
+					<?php $loop = new WP_Query( array( 'post_type' => 'partners', 'posts_per_page' => -1 ) ); ?>
           <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <div class="item"><?php the_post_thumbnail('thumbnail'); ?>
           <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
@@ -54,6 +54,7 @@ get_header(); ?>
           </div>
           <?php endwhile; ?>
 			</div>
+    </div> <!-- wrapper (sidebar and listing) -->
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

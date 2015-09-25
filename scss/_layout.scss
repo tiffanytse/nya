@@ -109,7 +109,8 @@ body .site{
   margin-right: 1em;
   @media only screen and (min-width: 37.5em){
     float: none;
-    width: 100%;
+    width: -webkit-calc(100% - 2em) ;
+    width: calc(100% - 2em) ;
   }
   
   @media #{$tablet} { //1400px
@@ -179,7 +180,8 @@ body .site{
   }
 }
 // Page color changes
-.page-template-page-templatesnya-toc-about-php {
+.page-template-page-templatesnya-toc-about-php, 
+.page-template-nya-staff {
   .site-content .entry-header{
     background-color: $purple;
   }
@@ -190,7 +192,8 @@ body .site{
     background-color: $yellow;
   }
 }
-.page-template-page-templatesnya-participants-php{
+.page-template-page-templatesnya-participants-php, 
+.page-template-nya-volunteers{
   .site-content .entry-header{
     background-color: $blue;
   }

@@ -18,6 +18,7 @@
     </header>
     <div class="wrapper">
       <aside class="toc-container">
+        <?php get_sidebar(); ?>
       </aside>
   		<div class="entry-content toc-content">
   			<?php the_content(); ?>

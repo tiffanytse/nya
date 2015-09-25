@@ -25,13 +25,15 @@
   }
   
   // Page color changes
-  &.page-template-page-templatesnya-toc-about-php h2{
+  &.page-template-page-templatesnya-toc-about-php h2, 
+  &.page-template-nya-staff h2{
     color: darken($purple, 10%);
   }
   &.page-template-page-templatesnya-toc-programs-php h2{
     color: darken($yellow, 10%);
   }
-  &.page-template-page-templatesnya-participants-php h2{
+  &.page-template-page-templatesnya-participants-php h2, 
+  &.page-template-nya-volunteers h2{
     color: darken($blue, 10%); 
   }
   &.page-template-page-templatesnya-partners-php h2, 
@@ -105,13 +107,13 @@ $toc-bg: $green;
 
 @media #{$tablet-landscape}{
   .sticky-wrapper{
-    margin-right: 2em;
+    margin-right: 0;
     width: 18.75em;  
   }
   .toc-container.stuck{
     float: none;
     width: 18.75em;  
-    margin-right: 2em;
+    margin-right: 0;
   }
 
 }
@@ -143,7 +145,8 @@ $toc-bg: $green;
 
 // Page color changes
 
-.page-template-page-templatesnya-toc-about-php{
+.page-template-page-templatesnya-toc-about-php,
+.page-template-nya-staff{
   .toc-container nav.table-of-contents{
     background: $purple;
     h5{@include alpha-attribute('background-color', rgba(black, 0.1), $purple);}
@@ -190,53 +193,6 @@ $toc-bg: $green;
   .entry-content, .entry-meta{
     padding: 1em 0;
   }
-  .partner-items{
-    padding: 1em;
-    @include border-box;
-    
-    h2{
-      margin-bottom: .5em;
-      @extend .alpha;
-    }
-    img{
-      width: 75%;
-      max-width: 150px;
-      display: inline-block;
-      float: left;
-      margin: 0 2em 2em 0;
-      @media #{$mobile-landscape} { //600px
-        margin: 0 2em 4em 0;
-      }
-    }
-
-    .item{
-      clear: both;
-      padding-bottom:0 ;
-      margin-bottom: 4em;
-      border-bottom: 1px solid #f5f5f5;
-      @media #{$mobile-landscape} { //600px
-        min-height: 200px;
-        padding-bottom: 2em;
-        margin-bottom: 2em;
-        max-width: 60em;
-               
-      }
-    }
-    @media #{$mobile-landscape} { //600px
-      h2, .entry-content{
-       clear: none;
-       display: inline;
-       p, a{ 
-         display: block;
-       }
-       p{
-         padding-left: 11.25em;
-         
-       }
-      }
-    }// mediaquery
-
-  }
 }
 
 .blog{
@@ -269,7 +225,7 @@ $toc-bg: $green;
   
   @media #{$tablet}{
     .widget-area{
-      width: 25%;
+      width: 21.25em;
       float: right;
     }
     .post{
@@ -296,7 +252,92 @@ $toc-bg: $green;
   }
 }
 
+.static-sidebar{
+  display: none;
+@media only screen and (min-width: 62.5em){
+    display: block;
+    .widget-area{
+      width: 21.25em;
+      float: right;
+    }
+  }
+}
 
+.toc-container{
+  .widget-area{
+    display: none;
+
+@media only screen and (min-width: 62.5em){
+      display: block;
+      width: 21.25em;
+      float: right;
+    }
+  }
+}
+
+/* Listing for Special Custom Post Types */
+
+.list-items{
+  padding: 1em;
+  @include border-box;
+  
+  h2{
+    margin-bottom: .5em;
+    @extend .alpha;
+  }
+  img{
+    width: 75%;
+    max-width: 150px;
+    display: inline-block;
+    float: left;
+    margin: 0 2em 2em 0;
+    @media #{$mobile-landscape} { //600px
+      margin: 0 2em 4em 0;
+    }
+  }
+
+  .item{
+    clear: both;
+    padding-bottom:0 ;
+    margin-bottom: 4em;
+    border-bottom: 1px solid #f5f5f5;
+    @media #{$mobile-landscape} { //600px
+      min-height: 200px;
+      padding-bottom: 2em;
+      margin-bottom: 2em;
+      max-width: 60em;
+             
+    }
+    .entry-content{
+      padding: 0;
+    }
+  }
+  @media #{$mobile-landscape} { //600px
+    h2, .entry-content{
+     clear: none;
+     display: inline;
+     p, a{ 
+       display: block;
+     }
+     p{
+       padding-left: 13em;
+       
+     }
+    }
+  }// mediaquery
+
+}
+
+
+@media only screen and (min-width: 62.5em){
+  .list-items{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 65%;
+    float: left;
+    clear: none;
+  } 
+}
 /* Blog and Single Post */
 
 .entry-meta{
