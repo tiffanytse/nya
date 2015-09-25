@@ -223,7 +223,7 @@ $toc-bg: $green;
     }
   }//type-post
   
-  @media #{$tablet}{
+  @media only screen and (min-width: 62.5em){
     .widget-area{
       width: 21.25em;
       float: right;
@@ -263,17 +263,17 @@ $toc-bg: $green;
   }
 }
 
-.toc-container{
-  .widget-area{
-    display: none;
 
-@media only screen and (min-width: 62.5em){
-      display: block;
-      width: 21.25em;
-      float: right;
-    }
+.widget-area{
+  display: none;
+
+  @media only screen and (min-width: 62.5em){
+  display: block;
+  width: 21.25em;
+  float: right;
   }
 }
+
 
 /* Listing for Special Custom Post Types */
 

@@ -24,6 +24,11 @@ img.emoji{
   padding: 0;
 }
 
+#footer-feature{
+  padding-top: 72px;
+  padding-top: 4.5em;
+}
+
 footer[role="contentinfo"]{
   color: #fff;
   border: 0;
@@ -49,4 +54,8 @@ hr{
   height: 1px;
   padding: 0;
   margin: 1em;
+}
+
+.comments-title{
+  font-weight: bold;
 }

@@ -15,12 +15,12 @@ get_header(); ?>
 
 				<?php get_template_part( 'content', get_post_format() ); ?>
 
+        <div class="wrapper">
 				<?php comments_template( '', true ); ?>
-
+      </div>
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

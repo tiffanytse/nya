@@ -220,6 +220,9 @@ footer[role="contentinfo"] {
       padding: 0;
       margin: 0 auto; } }
 
+.site-content article {
+  margin-bottom: 0; }
+
 h1, .alpha, .site-content .entry-header h1, .site-content .blog-header h1, .page .entry-content h2, .list-items h2 {
   font-size: 32px;
   font-size: 2rem; }
@@ -912,6 +915,10 @@ img.emoji {
 .no-padding {
   padding: 0; }
 
+#footer-feature {
+  padding-top: 72px;
+  padding-top: 4.5em; }
+
 footer[role="contentinfo"] {
   color: #fff;
   border: 0;
@@ -931,6 +938,9 @@ hr {
   height: 1px;
   padding: 0;
   margin: 1em; }
+
+.comments-title {
+  font-weight: bold; }
 
 /*
 * Visual Form Builder
@@ -1243,7 +1253,7 @@ hr {
       display: block; }
   .blog .type-post .entry-content {
     padding: 1em; }
-@media only screen and (min-width: 48.125em) {
+@media only screen and (min-width: 62.5em) {
   .blog .widget-area {
     width: 21.25em;
     float: right; }
@@ -1277,10 +1287,10 @@ hr {
         width: 21.25em;
         float: right; } }
 
-.toc-container .widget-area {
+.widget-area {
   display: none; }
   @media only screen and (min-width: 62.5em) {
-    .toc-container .widget-area {
+    .widget-area {
       display: block;
       width: 21.25em;
       float: right; } }
